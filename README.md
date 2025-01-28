@@ -1,12 +1,12 @@
 # Just a Dram, Too
 
-## Logo Here
+## ![Whisky Logo Banner](image.png)
 
 ## About
 
 Just a Dram, Too is an app to record the various whiskies one has tasted. The user can also add new entries as well as update or delete said entries.
 
-This app is a remake of the original (Just a Dram), which was built using the MEN stack. Just a Dram, Too is built using Flask, Postgres SQL, and React.
+This app is a remake of the original, [Just a Dram](https://github.com/chamer079/just-a-dram), built using the MEN stack with full CRUD capabilities. Just a Dram, Too is built using Flask, Postgres SQL, and React; while maintaining full CRUD capabilities.
 
 ## Deployed Links
 
@@ -24,7 +24,26 @@ Front-End Link - TBD
 
 ## ERD
 
-TBD
+![one to many ERD](image-1.png)
+
+## User Stories
+
+- As a user, I want to login to my whisky journal.
+- As a user, I want to be able to see all of the whisky entries that I've made with a brief description of the whiskies.
+- As a user, I want to be able to see the detailed information regarding one particular whisky.
+- As a user, I want to be able to create an entry for the following topics:
+  - Name of the whisky.
+  - The distillery that made it.
+  - Where it was made.
+  - The type of whisky.
+  - Adding an image of the whisky.
+  - The age statement of the whisky.
+  - The color is the whisky.
+  - The proof/ABV of the whisky.
+  - The flavor profile of the whisky.
+  - My thoughts about said whisky.
+- As a user, I want to be able to edit a specific entry if I made a mistake in the entry.
+- As a user, I want to delete a whisky that I no longer want to have in my journal.
 
 ## Attributions
 
