@@ -1,7 +1,12 @@
+import { Link } from "react-router"
+
+
 const NavBar = () => {
     return(
         <nav>
-            <p>Navbar will go here.</p>
+            <ul>
+                <li><Link to='/auth/sign-up'>Sign Up</Link></li>
+            </ul>
         </nav>
     )
 }
