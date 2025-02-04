@@ -1,6 +1,6 @@
 # Just a Dram, Too
 
-## ![Whisky Logo Banner](image.png)
+## ![Whisky Logo Banner](./src/images/README_Logo.png)
 
 ## About
 
@@ -24,7 +24,7 @@ Front-End Link - TBD
 
 ## ERD
 
-![one to many ERD](image-1.png)
+![one to many ERD](./src/images/ERD.png)
 
 ## User Stories
 
