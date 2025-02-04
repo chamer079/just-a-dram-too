@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router'
+import NavBar from "../NavBar/NavBar"
+
 
 const SignUpForm = () => {
     const navigate = useNavigate()
@@ -29,10 +31,11 @@ const SignUpForm = () => {
 
     return(
         <main>
+            <NavBar />
             <section>
                 <h1>Get Started Now</h1>
                 <p>{message}</p>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="username">Username</label>
                         <input 
