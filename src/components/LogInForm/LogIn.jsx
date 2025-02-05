@@ -15,7 +15,7 @@ const LogInForm = () => {
 
     const handleChange = (evt) => {
         setMessage("")
-        setFormData({...formData, [EventTarget.target.name]: evt.target.value})
+        setFormData({...formData, [evt.target.name]: evt.target.value})
     }
 
     const handleSubmit = async (evt) => {
