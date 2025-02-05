@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router'
 
 import SignUpForm from './components/SignUpForm/SignUpForm'
-import LogInForm from './components/LogInForm/LogIn'
+import LogInForm from './components/LogInForm/LogInForm'
 
 
 const App = () => {
