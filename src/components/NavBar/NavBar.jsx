@@ -2,17 +2,26 @@ import { useContext } from "react"
 import { Link } from "react-router"
 
 import { UserContext } from "../../contexts/UserContext" 
+import NavBarLogo from "../../images/NavBarLogo.png"
+import UserIcon from "../../images/UserIcon.png"
 
 
 const NavBar = () => {
-    const { user } = useContext(UserContext)
+    const { user, setUser } = useContext(UserContext)
+
+    const handleSignOut = () => {
+        localStorage.removeItem("token")
+        setUser(null)
+    }
 
     return(
         <nav>
             {user ? (
                 <ul>
+                    <li><Link to='/whiskies'><img src={NavBarLogo} alt="logo button" /></Link></li>
                     <li><Link to='/whiskies'>Home</Link></li>
                     <li><Link to='/whiskies/add'>Add New Entry</Link></li>
+                    <li><Link to='/' onClick={handleSignOut}><img src={UserIcon} alt="user icon" /></Link></li>
                 </ul>
             ) : (
                 <ul>
