@@ -19,7 +19,7 @@ const signUp = async (formData) => {
         }
 
         throw new Error("Invalid response from server")
-    } catch (err){
+    } catch(err) {
         console.log(err) //<-DELETE WHEN CLEANING CODE
         throw new Error(err)
     }

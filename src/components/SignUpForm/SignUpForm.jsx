@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router'
-import NavBar from "../NavBar/NavBar"
 
+import NavBar from "../NavBar/NavBar"
+import { signUp } from '../../services/authServices'
 
 const SignUpForm = () => {
     const navigate = useNavigate()
@@ -23,6 +24,12 @@ const SignUpForm = () => {
     const handleSubmit = async (evt) => {
         evt.preventDefault()
         console.log(formData) //<-Don't forget to delete later
+        try {
+            const newUser = await signUp(formData)
+            console.log(newUser)  //<- DELETE WHEN CLEANING CODE
+        } catch(err) {
+            setMessage(err.message)
+        }
     }
 
     const isFormInvalid = () => {
