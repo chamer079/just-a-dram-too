@@ -21,7 +21,7 @@ const LogInForm = () => {
     const handleSubmit = async (evt) => {
         evt.preventDefault()
         try {
-            const signedInUser = await signIn(formData)
+            const signedInUser = await logIn(formData)
 
             setUser(signedInUser)
             navigate('/whiskies')
