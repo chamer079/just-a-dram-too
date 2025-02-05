@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router'
 
 import NavBar from "../NavBar/NavBar"
 import { signUp } from '../../services/authServices'
+import { UserContext } from '../../contexts/UserContext'
 
 const SignUpForm = () => {
     const navigate = useNavigate()
+    const { setUser } = useContext(UserContext)
     const [message, setMessage] = useState("")
     const[formData, setFormData] = useState({
         username: "",
@@ -27,6 +29,8 @@ const SignUpForm = () => {
         try {
             const newUser = await signUp(formData)
             console.log(newUser)  //<- DELETE WHEN CLEANING CODE
+            setUser(newUser)
+            navigate('/whiskies')
         } catch(err) {
             setMessage(err.message)
         }
