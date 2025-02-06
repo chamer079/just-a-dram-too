@@ -1,4 +1,4 @@
-
+import NavBar from "../NavBar/NavBar"
 
 
 const Index = (props) => {
@@ -6,6 +6,7 @@ const Index = (props) => {
 
     return(
         <main>
+            <NavBar />
             <h1>INDEX PAGE</h1>
             <>
                 {getAllWhiskies?.map((whisky) => (
