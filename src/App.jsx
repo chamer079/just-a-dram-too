@@ -1,6 +1,7 @@
-import { useContext } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router'
 
+import * as whiskyService from './services/whiskyService'
 import SignUpForm from './components/SignUpForm/SignUpForm'
 import LogInForm from './components/LogInForm/LogInForm'
 import Landing from './components/Landing/Landing'
@@ -11,6 +12,18 @@ import { UserContext } from './contexts/UserContext'
 
 const App = () => {
   const { user } = useContext(UserContext)
+  
+  const [whiskies, setWhiskies] = useState([])
+
+  useEffect(() => {
+    const fetchAllWhiskies = async () => {
+      const whiskyData = await whiskyService.index()
+      console.log("whiskyData:", whiskyData)  //<-DELETE WHEN CLEANING CODE
+      setWhiskies(whiskyData)
+    }
+
+    if(user) fetchAllWhiskies()
+  }, [user])
 
   return(
     <>
@@ -20,7 +33,7 @@ const App = () => {
         { user ? (
           <>
             {/* Protected Routes Here */}
-            <Route path='/whiskies' element={<Index />} />
+            <Route path='/whiskies' element={<Index whiskies={whiskies} />} />
           </>
         ) : (
           <>
