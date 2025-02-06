@@ -35,7 +35,7 @@ const LogInForm = () => {
         <main>
             <article>
                 <h1>Welcome Back</h1>
-                <p>Welcome bacl! Please enter your details.</p>
+                <p>Welcome back! Please enter your details.</p>
                 <p>{message}</p>
                 <form autoComplete="off" onSubmit={handleSubmit}>
                     <div>

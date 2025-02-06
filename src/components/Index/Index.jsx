@@ -1,20 +1,49 @@
-import NavBar from "../NavBar/NavBar"
+import { Link } from "react-router";
 
+import NavBar from "../NavBar/NavBar";
+import StockImg from "../../images/StockImg.png";
 
 const Index = (props) => {
-    const getAllWhiskies = props.whiskies.whiskies
+  const getAllWhiskies = props.whiskies.whiskies;
 
-    return(
-        <main>
-            <NavBar />
-            <h1>INDEX PAGE</h1>
-            <>
-                {getAllWhiskies?.map((whisky) => (
-                <h2 key={whisky._id}>{whisky.name}</h2>))}
-            
-            </>
-        </main>
-    )
-}
+  const cardImgStyle = {
+    width: "250px",
+    height: "335px",
+  };
 
-export default Index
+  return (
+    <main>
+      <NavBar />
+      <>
+        {getAllWhiskies?.map((whisky) => (
+          <Link
+            key={whisky._id}
+            style={{ textDecoration: "none" }}
+            to={`/whiskies/${whisky._id}`}
+          >
+            <article className="whiskyCard">
+              <div className="cardImg">
+                {!whisky.image ? (
+                  <img style={cardImgStyle} src={StockImg} alt="filler image" />
+                ) : (
+                  <img
+                    style={cardImgStyle}
+                    src={whisky.image}
+                    alt={whisky.name}
+                  />
+                )}
+              </div>
+              <div className="cardText">
+                <h2>{whisky.name}</h2>
+                <p>{whisky.type}</p>
+                <p>{whisky.notes}</p>
+              </div>
+            </article>
+          </Link>
+        ))}
+      </>
+    </main>
+  );
+};
+
+export default Index;
