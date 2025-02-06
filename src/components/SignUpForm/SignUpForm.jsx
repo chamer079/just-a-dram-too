@@ -2,7 +2,7 @@ import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router'
 
 import NavBar from "../NavBar/NavBar"
-import { signUp } from '../../services/authServices'
+import { signUp } from '../../services/authService'
 import { UserContext } from '../../contexts/UserContext'
 
 const SignUpForm = () => {

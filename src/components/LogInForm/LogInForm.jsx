@@ -1,7 +1,7 @@
 import { useState, useContext } from "react"
 import { useNavigate } from "react-router"
 
-import { logIn } from "../../services/authServices"
+import { logIn } from "../../services/authService"
 import { UserContext } from "../../contexts/UserContext"
 
 const LogInForm = () => {
