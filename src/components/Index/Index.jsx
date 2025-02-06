@@ -8,9 +8,13 @@ const Index = (props) => {
         <main>
             <h1>INDEX PAGE</h1>
             <>
-            {props.whiskies.map((whisky) => (
+
+            {props.whiskies && props.whiskies.links > 0 ? (
+                props.whiskies.map((whisky) => (
                 <p key={whisky._id}>{whisky.name} </p>
-            ))}
+            ))
+            ) : (<h2>Start your journey. Add a whisky!</h2>)
+       }
             </>
         </main>
     )
