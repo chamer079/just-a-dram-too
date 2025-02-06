@@ -2,19 +2,15 @@
 
 
 const Index = (props) => {
-    console.log(props.whiskies)
+    const getAllWhiskies = props.whiskies.whiskies
 
     return(
         <main>
             <h1>INDEX PAGE</h1>
             <>
-
-            {props.whiskies && props.whiskies.links > 0 ? (
-                props.whiskies.map((whisky) => (
-                <p key={whisky._id}>{whisky.name} </p>
-            ))
-            ) : (<h2>Start your journey. Add a whisky!</h2>)
-       }
+                {getAllWhiskies?.map((whisky) => (
+                <h2 key={whisky._id}>{whisky.name}</h2>))}
+            
             </>
         </main>
     )

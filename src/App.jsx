@@ -2,8 +2,8 @@ import { useContext, useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router'
 
 import * as whiskyService from './services/whiskyService'
-import SignUpForm from './components/SignUpForm/SignUpForm'
-import LogInForm from './components/LogInForm/LogInForm'
+import SignUp from './components/SignUp/SignUp'
+import LogIn from './components/LogIn/LogIn'
 import Landing from './components/Landing/Landing'
 import Index from './components/Index/Index'
 
@@ -38,8 +38,8 @@ const App = () => {
         ) : (
           <>
            
-           <Route path='/sign-up' element={<SignUpForm />} />
-           <Route path='/login' element={<LogInForm />} />
+           <Route path='/sign-up' element={<SignUp />} />
+           <Route path='/login' element={<LogIn />} />
           </>
         )}
       </Routes>
