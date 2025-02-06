@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react'
-import { useNavigate } from 'react-router'
+import { useNavigate, Link } from 'react-router'
 
 import NavBar from "../NavBar/NavBar"
 import { signUp } from '../../services/authService'
@@ -111,7 +111,7 @@ const SignUpForm = () => {
                         </div>
                     </form>
                     <p>Have an account?</p>
-                    
+                    <Link to="/login">Login</Link>
                 </div>
             </section>
         </main>

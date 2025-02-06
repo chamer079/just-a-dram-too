@@ -3,6 +3,7 @@ import { useNavigate } from "react-router"
 
 import { logIn } from "../../services/authService"
 import { UserContext } from "../../contexts/UserContext"
+import GlassOfWhisky from "../../images/GlassOfWhisky.png"
 
 const LogInForm = () => {
     const navigate = useNavigate()
@@ -32,7 +33,7 @@ const LogInForm = () => {
 
     return(
         <main>
-            <section>
+            <article>
                 <h1>Welcome Back</h1>
                 <p>Welcome bacl! Please enter your details.</p>
                 <p>{message}</p>
@@ -66,10 +67,10 @@ const LogInForm = () => {
                         <button onClick={() => navigate('/')}>Cancel</button>
                     </div>
                 </form>
-            </section>
-            <section>
-                <h2>Image Here</h2>
-            </section>
+            </article>
+            <article>
+                <img src={GlassOfWhisky} alt="glas of whisky" />
+            </article>
         </main>
     )
 }
