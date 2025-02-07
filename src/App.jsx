@@ -28,17 +28,18 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path='/' element={<Landing />} />
         {user ? (
           <>
             {/* Protected Routes Here */}
-            <Route path="/whiskies" element={<Index whiskies={whiskies} />} />
-            <Route path="/whiskies/:whiskyId" element={<WhiskyDetails />} />
+            <Route path='/whiskies' element={<Index whiskies={whiskies} />} />
+            <Route path='/whiskies/:whiskyId' element={<WhiskyDetails />} />
+            <Route path='/whiskies/new' element={<h1>Add a Whisky</h1>} />
           </>
         ) : (
           <>
-            <Route path="/sign-up" element={<SignUp />} />
-            <Route path="/login" element={<LogIn />} />
+            <Route path='/sign-up' element={<SignUp />} />
+            <Route path='/login' element={<LogIn />} />
           </>
         )}
       </Routes>

@@ -20,7 +20,7 @@ const NavBar = () => {
                 <ul>
                     <li><Link to='/whiskies'><img src={NavBarLogo} alt="logo button" /></Link></li>
                     <li><Link to='/whiskies'>Home</Link></li>
-                    <li><Link to='/whiskies/add'>Add New Entry</Link></li>
+                    <li><Link to='/whiskies/new'>Add New Entry</Link></li>
                     <li><Link to='/' onClick={handleSignOut}><img src={UserIcon} alt="user icon" /></Link></li>
                 </ul>
             ) : (
