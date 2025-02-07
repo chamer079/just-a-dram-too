@@ -23,7 +23,7 @@ const App = () => {
     };
 
     if (user) fetchAllWhiskies()
-  }, [user]);
+  }, [user])
 
   return (
     <>
