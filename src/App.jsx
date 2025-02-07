@@ -6,6 +6,7 @@ import SignUp from './components/SignUp/SignUp'
 import LogIn from './components/LogIn/LogIn'
 import Landing from './components/Landing/Landing'
 import Index from './components/Index/Index'
+import WhiskyDetails from './components/WhiskyDetails/WhiskyDetails'
 
 import { UserContext } from './contexts/UserContext'
 
@@ -34,6 +35,7 @@ const App = () => {
           <>
             {/* Protected Routes Here */}
             <Route path='/whiskies' element={<Index whiskies={whiskies} />} />
+            <Route path='/whiskies/:whiskyId' element={<WhiskyDetails />} />
           </>
         ) : (
           <>
