@@ -5,7 +5,7 @@ import * as whiskyService from '../../services/whiskyService'
 
 const WhiskyDetails = () => {
     const { whiskyId } = useParams()
-    console.log(useParams())
+    console.log(whiskyId)
     console.log("whiskyId:", whiskyId)  //<-DELETE WHEN CLEANING CODE
 
     const [whisky, setWhisky] = useState()
@@ -13,7 +13,7 @@ const WhiskyDetails = () => {
     useEffect(() => {
         const fetchWhisky = async () => {
             const whiskyData = await whiskyService.show(whiskyId)
-            setWhisky(whiskyData)
+            setWhisky(whiskyData.whisky)
         }
         fetchWhisky()
     }, [whiskyId])

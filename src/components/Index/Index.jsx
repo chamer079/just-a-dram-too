@@ -4,8 +4,6 @@ import NavBar from "../NavBar/NavBar";
 import StockImg from "../../images/StockImg.png";
 
 const Index = (props) => {
-  const getAllWhiskies = props.whiskies.whiskies;
-
   const cardImgStyle = {
     width: "250px",
     height: "335px",
@@ -15,11 +13,11 @@ const Index = (props) => {
     <main>
       <NavBar />
       <>
-        {getAllWhiskies?.map((whisky) => (
+        {props.whiskies?.map((whisky) => (
           <Link
             key={whisky._id}
             style={{ textDecoration: "none" }}
-            to={`/whiskies/${whisky._id}`}
+            to={`/whiskies/${whisky.id}`}
           >
             <article className="whiskyCard">
               <div className="cardImg">

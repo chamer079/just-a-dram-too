@@ -19,7 +19,7 @@ const App = () => {
     const fetchAllWhiskies = async () => {
       const whiskyData = await whiskyService.index()
       console.log("whiskyData:", whiskyData); //<-DELETE WHEN CLEANING CODE
-      setWhiskies(whiskyData)
+      setWhiskies(whiskyData.whiskies)
     };
 
     if (user) fetchAllWhiskies()
