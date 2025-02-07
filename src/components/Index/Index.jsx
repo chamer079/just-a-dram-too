@@ -1,13 +1,13 @@
-import { Link } from "react-router";
+import { Link } from "react-router"
 
-import NavBar from "../NavBar/NavBar";
-import StockImg from "../../images/StockImg.png";
+import NavBar from "../NavBar/NavBar"
+import StockImg from "../../images/StockImg.png"
 
 const Index = (props) => {
   const cardImgStyle = {
     width: "250px",
     height: "335px",
-  };
+  }
 
   return (
     <main>
@@ -41,7 +41,7 @@ const Index = (props) => {
         ))}
       </>
     </main>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index
