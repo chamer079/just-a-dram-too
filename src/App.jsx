@@ -46,6 +46,8 @@ const App = () => {
 
   const handleUpdateWhisky = async (whiskyId, whiskyFormData) => {
     console.log("whiskyId:", whiskyId, "whiskyFormData:", whiskyFormData) //<-DELETE WHEN CLEANING CODE
+    const updatedWhisky = await whiskyService.update(whiskyId, whiskyFormData)
+    setWhiskies(whiskies.whiskies.map((whisky) => (whiskyId === whisky.id ? updatedWhisky : whisky)))
     navigate(`/whiskies/${whiskyId}`)
   }
 

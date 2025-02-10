@@ -44,10 +44,10 @@ const create = async (whiskyFormData) => {
     }
 }
 
-const deleteWhisky = async(whiskyId) => {
+const deleteWhisky = async (whiskyId) => {
     try {
         const res = await fetch(`${BASE_URL}/${whiskyId}`, {
-            method: "DELeTE",
+            method: "DELETE",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -64,9 +64,9 @@ const update = async (whiskyId, whiskyFormData) => {
             method: "PUT",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
-            body: JSON.stringify(whiskyFormData)
+            body: JSON.stringify(whiskyFormData),
         })
         return res.json()
     } catch(err){
