@@ -35,6 +35,12 @@ const App = () => {
     navigate('/whiskies')
   }
 
+  const handleDeleteWhisky = async (whiskyId) => {
+    console.log("whiskyId:", whiskyId)  //<-DELETE WHEN CLEANING CODE
+    setWhiskies(whiskies.filter((whisky) => whisky.id !== whiskyId))
+    navigate('/whiskies')
+  }
+
   return (
     <>
       <Routes>
@@ -43,7 +49,7 @@ const App = () => {
           <>
             {/* Protected Routes Here */}
             <Route path='/whiskies' element={<Index whiskies={whiskies} />} />
-            <Route path='/whiskies/:whiskyId' element={<WhiskyDetails />} />
+            <Route path='/whiskies/:whiskyId' element={<WhiskyDetails handleDeleteWhisky={handleDeleteWhisky} />} />
             <Route path='/whiskies/new' element={<WhiskyForm handleAddWhisky={handleAddWhisky} />} />
           </>
         ) : (

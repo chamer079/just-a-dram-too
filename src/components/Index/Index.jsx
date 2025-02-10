@@ -15,7 +15,7 @@ const Index = (props) => {
       <>
         {props.whiskies?.map((whisky) => (
           <Link
-            key={whisky._id}
+            key={whisky.id}
             style={{ textDecoration: "none" }}
             to={`/whiskies/${whisky.id}`}
           >
