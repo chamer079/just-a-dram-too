@@ -1,4 +1,4 @@
-import { useParams } from "react-router"
+import { useParams, Link } from "react-router"
 import { useState, useEffect } from "react"
 
 import * as whiskyService from "../../services/whiskyService"
@@ -47,6 +47,7 @@ const WhiskyDetails = (props) => {
         </div>
       </section>
       <section>
+        <Link to={`/whiskies/${whisky.id}/edit`}>Update</Link>
         <button onClick={() => props.handleDeleteWhisky(whiskyId)}>DELETE</button>
       </section>
     </main>

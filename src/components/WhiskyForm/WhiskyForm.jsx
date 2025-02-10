@@ -1,9 +1,13 @@
 import { useState } from "react"
+import { useParams } from "react-router"
 
+import NavBar from "../NavBar/NavBar"
 import StockImg from "../../images/StockImg.png"
 
 
 const WhiskyForm = (props) => {
+    const { whiskyId } = useParams()
+    // console.log(whiskyId)
     const [formData, setFormData] = useState({
         name: "",
         distillery: "",
@@ -34,6 +38,7 @@ const WhiskyForm = (props) => {
 
     return(
         <main>
+            <NavBar />
             <form onSubmit={handleSubmit}>
             <section>
                 <div className="img-input">
