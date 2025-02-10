@@ -3,7 +3,7 @@ import { useState } from "react"
 import StockImg from "../../images/StockImg.png"
 
 
-const WhiskyForm = () => {
+const WhiskyForm = (props) => {
     const [formData, setFormData] = useState({
         name: "",
         distillery: "",
@@ -24,6 +24,12 @@ const WhiskyForm = () => {
     const handleSubmit = (evt) => {
         evt.preventDefault()
         console.log("formData", formData)   //<- DELETE WHEN CLEANING CODE
+        props.handleAddWhisky(formData)
+    }
+
+    const imgStyle = {
+        width: "630px",
+        height: "794px",
     }
 
     return(
@@ -39,7 +45,7 @@ const WhiskyForm = () => {
                         value={formData.image}
                         onChange={handleChange}
                     />
-                    <img src={StockImg}  alt="filler image"/>
+                    <img style={imgStyle} src={StockImg}  alt="filler image"/>
                 </div>
             </section>
             <section>
@@ -85,11 +91,11 @@ const WhiskyForm = () => {
                         value={formData.age}
                         onChange={handleChange}
                     />
-                    <label htmlFor="alcohol-content-input">Alcohol Content</label>
+                    <label htmlFor="alcohol_content-input">Alcohol Content</label>
                     <input 
                         type="text"
-                        name="alcohol-content"
-                        id="alcohol-content-input"
+                        name="alcohol_content"
+                        id="alcohol_content-input"
                         value={formData.alcohol_content}
                         onChange={handleChange}
                     />

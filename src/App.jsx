@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react"
-import { Routes, Route } from "react-router"
+import { Routes, Route, useNavigate } from "react-router"
 
 import * as whiskyService from "./services/whiskyService"
 import SignUp from "./components/SignUp/SignUp"
@@ -7,6 +7,7 @@ import LogIn from "./components/LogIn/LogIn"
 import Landing from "./components/Landing/Landing"
 import Index from "./components/Index/Index"
 import WhiskyDetails from "./components/WhiskyDetails/WhiskyDetails"
+import WhiskyForm from "./components/WhiskyForm/WhiskyForm"
 
 import { UserContext } from "./contexts/UserContext"
 
@@ -14,6 +15,8 @@ const App = () => {
   const { user } = useContext(UserContext)
 
   const [whiskies, setWhiskies] = useState([])
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchAllWhiskies = async () => {
@@ -25,6 +28,11 @@ const App = () => {
     if (user) fetchAllWhiskies()
   }, [user])
 
+  const handleAddWhisky = async (whiskyFormData) => {
+    console.log("whiskyFormData:", whiskyFormData)  //<- DELETE WHEN CLEANING CODE
+    navigate('/whiskies')
+  }
+
   return (
     <>
       <Routes>
@@ -34,7 +42,7 @@ const App = () => {
             {/* Protected Routes Here */}
             <Route path='/whiskies' element={<Index whiskies={whiskies} />} />
             <Route path='/whiskies/:whiskyId' element={<WhiskyDetails />} />
-            <Route path='/whiskies/new' element={<h1>Add a Whisky</h1>} />
+            <Route path='/whiskies/new' element={<WhiskyForm handleAddWhisky={handleAddWhisky} />} />
           </>
         ) : (
           <>

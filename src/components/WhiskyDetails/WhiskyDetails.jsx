@@ -22,8 +22,6 @@ const WhiskyDetails = () => {
     return <h1>Loading...</h1>
   }
 
-  console.log("whisky state:", whisky)
-
   return (
     <main>
       <NavBar />
