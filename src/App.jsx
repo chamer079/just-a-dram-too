@@ -30,6 +30,8 @@ const App = () => {
 
   const handleAddWhisky = async (whiskyFormData) => {
     console.log("whiskyFormData:", whiskyFormData)  //<- DELETE WHEN CLEANING CODE
+    const newWhisky = await whiskyService.create(whiskyFormData)
+    setWhiskies([newWhisky, ...whiskies])
     navigate('/whiskies')
   }
 

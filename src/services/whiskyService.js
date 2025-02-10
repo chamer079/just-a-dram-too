@@ -24,7 +24,23 @@ const show = async (whiskyId) => {
         })
         return res.json()
     }catch(err) {
-        console.log(err)
+        throw new Error(err)
+    }
+}
+
+const create = async (whiskyFormData) => {
+    try {
+        const res = await fetch(BASE_URL, {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(whiskyFormData),
+        })
+        return res.json()
+    }catch(err) {
+        throw new Error(err)
     }
 }
 
@@ -32,4 +48,5 @@ const show = async (whiskyId) => {
 export {
     index,
     show,
+    create,
 }
