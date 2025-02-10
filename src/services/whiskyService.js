@@ -44,9 +44,24 @@ const create = async (whiskyFormData) => {
     }
 }
 
+const deleteWhisky = async(whiskyId) => {
+    try {
+        const res = await fetch(`${BASE_URL}/${whiskyId}`, {
+            method: "DELeTE",
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+        })
+        return res.json()
+    }catch(err) {
+        throw new Error(err)
+    }
+}
+
 
 export {
     index,
     show,
     create,
+    deleteWhisky,
 }

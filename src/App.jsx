@@ -37,7 +37,8 @@ const App = () => {
 
   const handleDeleteWhisky = async (whiskyId) => {
     console.log("whiskyId:", whiskyId)  //<-DELETE WHEN CLEANING CODE
-    setWhiskies(whiskies.filter((whisky) => whisky.id !== whiskyId))
+    const deletedWhisky = await whiskyService.deleteWhisky(whiskyId)
+    setWhiskies(whiskies.filter((whisky) => whisky.id !== deletedWhisky.id))
     navigate('/whiskies')
   }
 
