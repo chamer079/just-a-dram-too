@@ -31,7 +31,7 @@ const App = () => {
   const handleAddWhisky = async (whiskyFormData) => {
     console.log("whiskyFormData:", whiskyFormData)  //<- DELETE WHEN CLEANING CODE
     const newWhisky = await whiskyService.create(whiskyFormData)
-    console.log(newWhisky)
+    console.log(newWhisky)  //<-DELETE WHEN CLEANING CODE
     setWhiskies([newWhisky.whisky, ...whiskies])
     navigate('/whiskies')
   }
@@ -44,6 +44,11 @@ const App = () => {
     window.location.reload()
   }
 
+  const handleUpdateWhisky = async (whiskyId, whiskyFormData) => {
+    console.log("whiskyId:", whiskyId, "whiskyFormData:", whiskyFormData) //<-DELETE WHEN CLEANING CODE
+    navigate(`/whiskies/${whiskyId}`)
+  }
+
   return (
     <>
       <Routes>
@@ -54,7 +59,7 @@ const App = () => {
             <Route path='/whiskies' element={<Index whiskies={whiskies} />} />
             <Route path='/whiskies/:whiskyId' element={<WhiskyDetails handleDeleteWhisky={handleDeleteWhisky} />} />
             <Route path='/whiskies/new' element={<WhiskyForm handleAddWhisky={handleAddWhisky} />} />
-            <Route path='/whiskies/:whiskyId/edit' element={<WhiskyForm />} />
+            <Route path='/whiskies/:whiskyId/edit' element={<WhiskyForm handleUpdateWhisky={handleUpdateWhisky} />} />
           </>
         ) : (
           <>

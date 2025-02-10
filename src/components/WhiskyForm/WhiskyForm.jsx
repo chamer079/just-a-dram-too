@@ -1,13 +1,14 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useParams } from "react-router"
 
+import * as whiskyService from "../../services/whiskyService"
 import NavBar from "../NavBar/NavBar"
 import StockImg from "../../images/StockImg.png"
 
 
 const WhiskyForm = (props) => {
     const { whiskyId } = useParams()
-    // console.log(whiskyId)
+    console.log(whiskyId)
     const [formData, setFormData] = useState({
         name: "",
         distillery: "",
@@ -28,8 +29,33 @@ const WhiskyForm = (props) => {
     const handleSubmit = (evt) => {
         evt.preventDefault()
         console.log("formData", formData)   //<- DELETE WHEN CLEANING CODE
-        props.handleAddWhisky(formData)
+        if(whiskyId){
+            props.handleUpdateWhisky(whiskyId, formData)
+        } else{
+            props.handleAddWhisky(formData)
+        }
     }
+
+    useEffect(() => {
+        const fetchWhisky = async () => {
+            const whiskyData = await whiskyService.show(whiskyId)
+            setFormData(whiskyData)
+        }
+        if(whiskyId) fetchWhisky()
+        
+        return () => setFormData({
+            name: "",
+            distillery: "",
+            image: "",
+            type: "",
+            origin: "",
+            age: "",
+            flavor: "",
+            hue: "",
+            alcohol_content: "",
+            notes: ""
+        })
+    }, [whiskyId])
 
     const imgStyle = {
         width: "630px",
@@ -39,6 +65,7 @@ const WhiskyForm = (props) => {
     return(
         <main>
             <NavBar />
+            <h1>{whiskyId ? "EDIT PAGE" : "CREATE PAGE"}</h1>
             <form onSubmit={handleSubmit}>
             <section>
                 <div className="img-input">

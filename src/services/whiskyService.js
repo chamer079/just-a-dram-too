@@ -11,7 +11,7 @@ const index = async () => {
             throw new Error(data.err)
         }
         return data
-    }catch(err) {
+    } catch(err){
         console.log(err)    //<- DELETE WHEN CLEANING CODE
         throw new Error(err)
     }
@@ -23,7 +23,7 @@ const show = async (whiskyId) => {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         })
         return res.json()
-    }catch(err) {
+    } catch(err){
         throw new Error(err)
     }
 }
@@ -39,7 +39,7 @@ const create = async (whiskyFormData) => {
             body: JSON.stringify(whiskyFormData),
         })
         return res.json()
-    }catch(err) {
+    } catch(err){
         throw new Error(err)
     }
 }
@@ -53,7 +53,23 @@ const deleteWhisky = async(whiskyId) => {
             },
         })
         return res.json()
-    }catch(err) {
+    } catch(err){
+        throw new Error(err)
+    }
+}
+
+const update = async (whiskyId, whiskyFormData) => {
+    try {
+        const res = await fetch(`${BASE_URL}/${whiskyId}`, {
+            method: "PUT",
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(whiskyFormData)
+        })
+        return res.json()
+    } catch(err){
         throw new Error(err)
     }
 }
@@ -64,4 +80,5 @@ export {
     show,
     create,
     deleteWhisky,
+    update,
 }
