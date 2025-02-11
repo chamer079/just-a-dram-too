@@ -8,7 +8,7 @@ import StockImg from "../../images/StockImg.png"
 
 const WhiskyForm = (props) => {
     const { whiskyId } = useParams()
-    console.log(whiskyId)
+    // console.log(whiskyId)   //<- DELETE WHEN CLEANING CODE
     const [formData, setFormData] = useState({
         name: "",
         distillery: "",
@@ -28,22 +28,16 @@ const WhiskyForm = (props) => {
 
     const handleSubmit = (evt) => {
         evt.preventDefault()
-        console.log("formData", formData)   //<- DELETE WHEN CLEANING CODE
+        // console.log("formData", formData)   //<- DELETE WHEN CLEANING CODE
         if(whiskyId){
             props.handleUpdateWhisky(whiskyId, formData)
+            console.log("updated formData:", formData)  //<- DELETE WHEN CLEANING CODE
         } else{
             props.handleAddWhisky(formData)
+            console.log("formData:", formData)  //<- DELETE WHEN CLEANING CODE
         }
-    }
-
-    useEffect(() => {
-        const fetchWhisky = async () => {
-            const whiskyData = await whiskyService.show(whiskyId)
-            setFormData(whiskyData)
-        }
-        if(whiskyId) fetchWhisky()
         
-        return () => setFormData({
+        setFormData({
             name: "",
             distillery: "",
             image: "",
@@ -55,7 +49,16 @@ const WhiskyForm = (props) => {
             alcohol_content: "",
             notes: ""
         })
-    }, [whiskyId])
+    }
+
+   useEffect(() => {
+    const fetchWhisky = async () => {
+        const whiskyData = await whiskyService.show(whiskyId)
+        setFormData(whiskyData)
+        console.log("whiskyData:", whiskyData)
+    }
+    if(whiskyId) fetchWhisky()         
+   }, [whiskyId])
 
     const imgStyle = {
         width: "630px",
@@ -123,11 +126,11 @@ const WhiskyForm = (props) => {
                         value={formData.age}
                         onChange={handleChange}
                     />
-                    <label htmlFor="alcohol_content-input">Alcohol Content</label>
+                    <label htmlFor="alcohol-content-input">Alcohol Content</label>
                     <input 
                         type="text"
                         name="alcohol_content"
-                        id="alcohol_content-input"
+                        id="alcohol-content-input"
                         value={formData.alcohol_content}
                         onChange={handleChange}
                     />
@@ -159,7 +162,7 @@ const WhiskyForm = (props) => {
                     />
                 </div>
             </section>
-            <button type="submit">Add New Entry</button>
+            <button type="submit">{whiskyId ? "Update Entry" : "Add New Entry"}</button>
             </form>
         </main>
     )

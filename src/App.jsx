@@ -21,7 +21,7 @@ const App = () => {
   useEffect(() => {
     const fetchAllWhiskies = async () => {
       const whiskyData = await whiskyService.index()
-      console.log("whiskyData:", whiskyData); //<-DELETE WHEN CLEANING CODE
+      // console.log("whiskyData:", whiskyData); //<-DELETE WHEN CLEANING CODE
       setWhiskies(whiskyData.whiskies)
     };
 
@@ -29,9 +29,9 @@ const App = () => {
   }, [user])
 
   const handleAddWhisky = async (whiskyFormData) => {
-    console.log("whiskyFormData:", whiskyFormData)  //<- DELETE WHEN CLEANING CODE
+    // console.log("whiskyFormData:", whiskyFormData)  //<- DELETE WHEN CLEANING CODE
     const newWhisky = await whiskyService.create(whiskyFormData)
-    console.log(newWhisky)  //<-DELETE WHEN CLEANING CODE
+    // console.log(newWhisky)  //<-DELETE WHEN CLEANING CODE
     setWhiskies([newWhisky.whisky, ...whiskies])
     navigate('/whiskies')
   }
@@ -44,12 +44,14 @@ const App = () => {
     window.location.reload()
   }
 
-  const handleUpdateWhisky = async (whiskyId, whiskyFormData) => {
-    console.log("whiskyId:", whiskyId, "whiskyFormData:", whiskyFormData) //<-DELETE WHEN CLEANING CODE
-    const updatedWhisky = await whiskyService.update(whiskyId, whiskyFormData)
-    setWhiskies(whiskies.whiskies.map((whisky) => (whiskyId === whisky.id ? updatedWhisky : whisky)))
-    navigate(`/whiskies/${whiskyId}`)
-  }
+ const handleUpdateWhisky = async (whiskyId, whiskyFormData) => {
+  // console.log("whiskyID:", whiskyId, "whiskyFormData:", whiskyFormData) //<-DELETE WHEN CLEANING CODE
+  const updatedWhisky = await whiskyService.update(whiskyId, whiskyFormData)
+  // console.log(updatedWhisky.whisky)  //<-DELETE WHEN CLEANING CODE
+  // console.log(whiskies) //<-DELETE WHEN CLEANING CODE
+  setWhiskies(whiskies.map((whisky) => (whiskyId === whisky.id ? updatedWhisky.whisky : whisky)))
+  navigate(`/whiksies/${whiskyId}`)
+ }
 
   return (
     <>

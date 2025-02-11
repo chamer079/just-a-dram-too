@@ -59,7 +59,9 @@ const deleteWhisky = async (whiskyId) => {
 }
 
 const update = async (whiskyId, whiskyFormData) => {
+    // console.log(whiskyId)
     try {
+        // console.log(whiskyFormData)
         const res = await fetch(`${BASE_URL}/${whiskyId}`, {
             method: "PUT",
             headers: {
