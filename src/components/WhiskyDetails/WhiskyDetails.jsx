@@ -3,12 +3,10 @@ import { useState, useEffect } from "react"
 
 import * as whiskyService from "../../services/whiskyService"
 import NavBar from "../NavBar/NavBar"
-// import { UserContext } from "../../contexts/UserContext"
 import StockImg from "../../images/StockImg.png"
 
 const WhiskyDetails = (props) => {
   const { whiskyId } = useParams()
-  // const { user } = useContext(UserContext)
 
   const [whisky, setWhisky] = useState()
 

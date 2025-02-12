@@ -12,7 +12,6 @@ const index = async () => {
         }
         return data
     } catch(err){
-        console.log(err)    //<- DELETE WHEN CLEANING CODE
         throw new Error(err)
     }
 }

@@ -21,7 +21,6 @@ const App = () => {
   useEffect(() => {
     const fetchAllWhiskies = async () => {
       const whiskyData = await whiskyService.index()
-      // console.log("whiskyData:", whiskyData); //<-DELETE WHEN CLEANING CODE
       setWhiskies(whiskyData.whiskies)
     };
 
@@ -30,9 +29,7 @@ const App = () => {
 
   const handleAddWhisky = async (whiskyFormData) => {
     try {
-      // console.log("whiskyFormData:", whiskyFormData)  //<- DELETE WHEN CLEANING CODE
       const newWhisky = await whiskyService.create(whiskyFormData)
-      // console.log(newWhisky)  //<-DELETE WHEN CLEANING CODE
       setWhiskies([newWhisky.whisky, ...whiskies])
       navigate('/whiskies')
     }catch(err) {
@@ -42,7 +39,6 @@ const App = () => {
 
   const handleDeleteWhisky = async (whiskyId) => {
     try {
-      // console.log("whiskyId:", whiskyId)  //<-DELETE WHEN CLEANING CODE
       const deletedWhisky = await whiskyService.deleteWhisky(whiskyId)
       setWhiskies(whiskies.filter((whisky) => whisky.id !== deletedWhisky.id))
       navigate('/whiskies')
@@ -73,7 +69,6 @@ const App = () => {
         <Route path='/' element={<Landing />} />
         {user ? (
           <>
-            {/* Protected Routes Here */}
             <Route path='/whiskies' element={<Index whiskies={whiskies} />} />
             <Route path='/whiskies/:whiskyId' element={<WhiskyDetails handleDeleteWhisky={handleDeleteWhisky} />} />
             <Route path='/whiskies/new' element={<WhiskyForm handleAddWhisky={handleAddWhisky} />} />

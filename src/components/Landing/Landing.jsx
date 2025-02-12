@@ -1,4 +1,6 @@
 import { Link } from "react-router"
+
+import "./Landing.css"
 import LandingImg from "../../images/LandingImg.png"
 
 const Landing = () => {

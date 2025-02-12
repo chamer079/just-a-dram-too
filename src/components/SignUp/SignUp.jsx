@@ -27,10 +27,8 @@ const SignUpForm = () => {
 
     const handleSubmit = async (evt) => {
         evt.preventDefault()
-        console.log(formData) //<-Don't forget to delete later
         try {
             const newUser = await signUp(formData)
-            console.log(newUser)  //<- DELETE WHEN CLEANING CODE
             setUser(newUser)
             navigate('/whiskies')
         } catch(err) {
