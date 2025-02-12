@@ -4,7 +4,8 @@ import { useNavigate, Link } from 'react-router'
 import NavBar from "../NavBar/NavBar"
 import { signUp } from '../../services/authService'
 import { UserContext } from '../../contexts/UserContext'
-import BarrelPic from "../../images/BarrelPic.png"
+import "./SignUp.css"
+import BarrelPic from "../../images/BarrelPic.jpg"
 import PotStills from "../../images/PotStills.png"
 
 const SignUpForm = () => {
@@ -40,13 +41,17 @@ const SignUpForm = () => {
         return !(username && email && password && password === passwordConf)
     }
 
+    const imgStyle = {
+        hieght: "fit-content",
+    }
+
     return(
         <main>
             <NavBar />
-            <header>
-                <img src={BarrelPic} alt="barrels" />
+            <header className="header-img">
+                <img style={imgStyle} src={BarrelPic} alt="barrels" />
             </header>
-            <section>
+            <section className="about-content">
                 <h2>About</h2>
                 <p>Whether you spell whisky with a “y” or an “ey” this is the place for you. Just a Dram is a digital journal for whisky enthusiasts to record, and share amongst friends, their tasting experiences. So, sit back. Pour yourself a dram, and begin documenting your whisky tasting journey.</p>
                 <p>Cheers!</p>
