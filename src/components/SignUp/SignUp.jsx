@@ -4,9 +4,8 @@ import { useNavigate, Link } from 'react-router'
 import NavBar from "../NavBar/NavBar"
 import { signUp } from '../../services/authService'
 import { UserContext } from '../../contexts/UserContext'
+import PotStills from "../../images/PotStills.jpg"
 import "./SignUp.css"
-import BarrelPic from "../../images/BarrelPic.jpg"
-import PotStills from "../../images/PotStills.png"
 
 const SignUpForm = () => {
     const navigate = useNavigate()
@@ -42,80 +41,87 @@ const SignUpForm = () => {
     }
 
     const imgStyle = {
-        hieght: "fit-content",
+        width: "680px",
+        height: "808px",
     }
+
 
     return(
         <main>
             <NavBar />
             <header className="header-img">
-                <img style={imgStyle} src={BarrelPic} alt="barrels" />
             </header>
             <section className="about-content">
                 <h2>About</h2>
                 <p>Whether you spell whisky with a “y” or an “ey” this is the place for you. Just a Dram is a digital journal for whisky enthusiasts to record, and share amongst friends, their tasting experiences. So, sit back. Pour yourself a dram, and begin documenting your whisky tasting journey.</p>
                 <p>Cheers!</p>
             </section>
-            <section>
-                <div>
-                    <img src={PotStills} alt="pot stills" />
+            <section className="sign-up-section">
+                <div className="sign-up-img">
+                    <img style={imgStyle} src={PotStills} alt="pot stills" />
                 </div>
-                <div>
-                    <h1>Get Started Now</h1>
-                    <p>{message}</p>
-                    <form onSubmit={handleSubmit}>
-                        <div>
-                            <label htmlFor="username">Username</label>
-                            <input 
-                                type="text"
-                                id="username"
-                                value={username}
-                                name="username"
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="email">Email</label>
-                            <input 
-                                type="text"
-                                id="email"
-                                value={email}
-                                name="email"
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="password">Password</label>
-                            <input 
-                                type="password"
-                                id="password"
-                                value={password}
-                                name="password"
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="confirm">Confirm Password</label>
-                            <input 
-                                type="password"
-                                id="confirm"
-                                value={passwordConf}
-                                name="passwordConf"
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <button disabled={isFormInvalid()}>Sign Up</button>
-                            <button onClick={() => navigate('/')}>Cancel</button>
-                        </div>
-                    </form>
-                    <p>Have an account?</p>
-                    <Link to="/login">Login</Link>
+                <div className="sign-up-content">
+                        <h1>Get Started Now</h1>
+                        <p>{message}</p>
+                        <form onSubmit={handleSubmit}>
+                            <div>
+                                {/* <label htmlFor="username"></label> */}
+                                <input 
+                                    type="text"
+                                    id="username"
+                                    value={username}
+                                    name="username"
+                                    onChange={handleChange}
+                                    placeholder="Username"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                {/* <label htmlFor="email">Email</label> */}
+                                <input 
+                                    type="text"
+                                    id="email"
+                                    value={email}
+                                    name="email"
+                                    onChange={handleChange}
+                                    placeholder="Email"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                {/* <label htmlFor="password">Password</label> */}
+                                <input 
+                                    type="password"
+                                    id="password"
+                                    value={password}
+                                    name="password"
+                                    onChange={handleChange}
+                                    placeholder="Password"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                {/* <label htmlFor="confirm">Confirm Password</label> */}
+                                <input 
+                                    type="password"
+                                    id="confirm"
+                                    value={passwordConf}
+                                    name="passwordConf"
+                                    onChange={handleChange}
+                                    placeholder="Confirm Password"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <button disabled={isFormInvalid()}>Sign Up</button>
+                            </div>
+                        </form>
+                    <div className="login-link">
+                        <p>Have an account?</p>
+                        <Link to="/login">Login</Link>
+                    </div>
                 </div>
+             
             </section>
         </main>
     )
