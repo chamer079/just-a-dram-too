@@ -32,6 +32,7 @@ const WhiskyForm = (props) => {
         if(whiskyId){
             props.handleUpdateWhisky(whiskyId, formData)
             console.log("updated formData:", formData)  //<- DELETE WHEN CLEANING CODE
+
         } else{
             props.handleAddWhisky(formData)
             console.log("formData:", formData)  //<- DELETE WHEN CLEANING CODE

@@ -3,7 +3,9 @@ import { useNavigate } from "react-router"
 
 import { logIn } from "../../services/authService"
 import { UserContext } from "../../contexts/UserContext"
-import GlassOfWhisky from "../../images/GlassOfWhisky.png"
+// import GlassOfWhisky from "../../images/GlassOfWhisky.png"
+import PouringWhisky from "../../images/PouringWhisky.jpg"
+import "./Login.css"
 
 const LogInForm = () => {
   const navigate = useNavigate()
@@ -31,46 +33,57 @@ const LogInForm = () => {
     }
   }
 
+  const imgStyle = {
+    width: "875px",
+    height: "858px",
+  }
+
+
   return (
     <main>
-      <article>
-        <h1>Welcome Back</h1>
-        <p>Welcome back! Please enter your details.</p>
-        <p>{message}</p>
-        <form autoComplete="off" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              autoComplete="off"
-              id="username"
-              value={formData.username}
-              name="username"
-              onChange={handleChange}
-              required
-            />
+      <section className="login-section">
+        <div className="login-content">
+          <div className="login-welcome">
+          <h1>Welcome Back</h1>
+          <p>Welcome back! Please enter your details.</p>
           </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              autoComplete="off"
-              id="password"
-              value={formData.password}
-              name="password"
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <button>Login</button>
-            <button onClick={() => navigate("/")}>Cancel</button>
-          </div>
-        </form>
-      </article>
-      <article>
-        <img src={GlassOfWhisky} alt="glas of whisky" />
-      </article>
+          <p>{message}</p>
+          <form className="login-form" autoComplete="off" onSubmit={handleSubmit}>
+            <div>
+              {/* <label htmlFor="username">Username</label> */}
+              <input
+                type="text"
+                autoComplete="off"
+                id="username"
+                value={formData.username}
+                name="username"
+                onChange={handleChange}
+                placeholder="Username"
+                required
+              />
+            </div>
+            <div>
+              {/* <label htmlFor="password">Password</label> */}
+              <input
+                type="password"
+                autoComplete="off"
+                id="password"
+                value={formData.password}
+                name="password"
+                onChange={handleChange}
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div>
+              <button>Login</button>
+            </div>
+          </form>
+        </div>  
+        <div className="login-img">
+          <img style={imgStyle} src={PouringWhisky} alt="glas of whisky" />
+        </div>
+      </section>
     </main>
   )
 }

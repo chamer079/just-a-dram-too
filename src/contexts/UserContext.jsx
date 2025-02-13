@@ -13,7 +13,7 @@ const getUserFormToken = () => {
 const UserProvider = ({ children }) => {
     const [user, setUser] = useState(getUserFormToken())
 
-    const value = { user, setUser}
+    const value = { user, setUser }
 
     return(
         <UserContext.Provider value={value}>

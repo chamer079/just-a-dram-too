@@ -41,8 +41,8 @@ const SignUpForm = () => {
     }
 
     const imgStyle = {
-        width: "680px",
-        height: "808px",
+        width: "850px",
+        height: "875px",
     }
 
 
@@ -61,7 +61,7 @@ const SignUpForm = () => {
                     <img style={imgStyle} src={PotStills} alt="pot stills" />
                 </div>
                 <div className="sign-up-content">
-                        <h1>Get Started Now</h1>
+                        <h1 className="sign-up-headline">Get Started Now</h1>
                         <p>{message}</p>
                         <form onSubmit={handleSubmit}>
                             <div>
@@ -121,7 +121,6 @@ const SignUpForm = () => {
                         <Link to="/login">Login</Link>
                     </div>
                 </div>
-             
             </section>
         </main>
     )
