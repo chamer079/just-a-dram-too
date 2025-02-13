@@ -23,14 +23,14 @@ h2 {
 }
 
 p {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 200;
     letter-spacing: .4px;
     line-height: 37px;
 }
   
 a {
-    font-size: 25px;
+    font-size: 23px;
 }
 
 a:hover {
@@ -44,7 +44,7 @@ a:hover {
 } */
 
 input {
-    font-size: 26px;
+    font-size: 24px;
 }
 
 input::placeholder {

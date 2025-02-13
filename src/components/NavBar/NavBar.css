@@ -13,4 +13,14 @@ a {
     text-align: left;
 }
 
+.protected-links {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: space-between;
+    align-items: center;
+    width: 99vw;
+    background-color: #16151B;
+    color: #ffffff;
+}
+
 

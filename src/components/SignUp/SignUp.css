@@ -6,7 +6,11 @@
 .about-content {
     display: flex;
     flex-flow: row wrap;
-    margin: 90px;
+    margin: 120px 60px;
+}
+
+.about-header {
+    margin-bottom: 30px;
 }
 
 .sign-up-section {

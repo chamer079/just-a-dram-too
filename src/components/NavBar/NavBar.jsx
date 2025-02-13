@@ -15,14 +15,24 @@ const NavBar = () => {
         setUser(null)
     }
 
+    const navLogoImg = {
+        width: "140px",
+        height: "100px",
+    }
+
+    const signOutImg = {
+        width: "100px",
+        height: "100px",
+    }
+
     return(
         <nav>
             {user ? (
                 <div className="protected-links">
-                    <li><Link to='/whiskies'><img src={NavBarLogo} alt="logo button" /></Link></li>
-                    <li><Link to='/whiskies'>Home</Link></li>
-                    <li><Link to='/whiskies/new'>Add New Entry</Link></li>
-                    <li><Link to='/' onClick={handleSignOut}><img src={UserIcon} alt="user icon" /></Link></li>
+                    <Link to='/whiskies'><img style={navLogoImg} src={NavBarLogo} alt="logo button" /></Link>
+                    <Link to='/whiskies'>Home</Link>
+                    <Link to='/whiskies/new'>Add New Entry</Link>
+                    <Link to='/' onClick={handleSignOut}><img style={signOutImg} src={UserIcon} alt="user icon" /></Link>
                 </div>
             ) : (
                 <div className="login-links">
