@@ -28,19 +28,24 @@ const NavBar = () => {
     return(
         <nav>
             {user ? (
-                <div className="protected-links">
-                    <Link to='/whiskies'><img style={navLogoImg} src={NavBarLogo} alt="logo button" /></Link>
-                    <Link to='/whiskies'>Home</Link>
-                    <Link to='/whiskies/new'>Add New Entry</Link>
-                    <Link to='/' onClick={handleSignOut}><img style={signOutImg} src={UserIcon} alt="user icon" /></Link>
+                <div >
+                    <ul className="protected-links">
+                        <Link className="logo-link" to='/whiskies'><img style={navLogoImg} src={NavBarLogo} alt="logo button" /></Link>
+                        <div className="home-create-links">
+                            <li><Link className="link-text" to='/whiskies'>Home</Link></li>
+                            <li className="user-link-divider">|</li>
+                            <li><Link className="link-text" to='/whiskies/new'>Add New Entry</Link></li>
+                        </div>
+                        <Link className="sign-out-link" to='/' onClick={handleSignOut}><img style={signOutImg} src={UserIcon} alt="user icon" /></Link>
+                    </ul>
                 </div>
             ) : (
-                <div className="login-links">
-                  
-                        <Link to='/sign-up'>Sign Up</Link> 
-                        <Link>|</Link>
-                        <Link to='/login'>Login</Link>
-                  
+                <div className="open-links">
+                   <ul>
+                        <li><Link className="login-links" to='/sign-up'>Sign Up</Link></li> 
+                        <li className="link-divider">|</li>
+                        <li><Link className="login-links" to='/login'>Login</Link></li>
+                    </ul>
 
                 </div>
             )}

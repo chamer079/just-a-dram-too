@@ -23,19 +23,32 @@ h2 {
 }
 
 p {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 200;
     letter-spacing: .4px;
     line-height: 37px;
 }
+
+ul {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: flex-end;
+    width: 98vw;
+}
   
 a {
-    font-size: 23px;
+    font-size: 26px;
+    text-decoration: none;
 }
 
 a:hover {
     color: #406BF8;
     font-weight: 600;
+}
+
+li {
+    text-decoration: none;
+    padding: 15px;
 }
 
 /* label {

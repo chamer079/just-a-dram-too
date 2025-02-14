@@ -56,9 +56,9 @@ const WhiskyForm = (props) => {
     const fetchWhisky = async () => {
         const whiskyData = await whiskyService.show(whiskyId)
         setFormData(whiskyData)
-        console.log("whiskyData:", whiskyData)
+        console.log("whiskyData:", whiskyData)     //<- DELETE WHEN CLEANING CODE
     }
-    if(whiskyId) fetchWhisky()         
+    if(whiskyId) fetchWhisky() 
    }, [whiskyId])
 
     const imgStyle = {
