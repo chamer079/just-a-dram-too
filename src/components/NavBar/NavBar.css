@@ -45,14 +45,15 @@ ul {
 
 .link-text {
     color: #ffffff;
-    font-weight: 200;
-    letter-spacing: 1px;
+    font-weight: 400;
+    letter-spacing: 3px;
     padding: 15px;
 }
 
 .user-link-divider {
     color: #ffffff;
     font-size: 28px;
+    cursor: default;
 }
 
 .user-link-divider:hover {

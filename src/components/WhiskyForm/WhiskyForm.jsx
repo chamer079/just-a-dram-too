@@ -55,7 +55,7 @@ const WhiskyForm = (props) => {
    useEffect(() => {
     const fetchWhisky = async () => {
         const whiskyData = await whiskyService.show(whiskyId)
-        setFormData(whiskyData)
+        setFormData(whiskyData.whisky)
         console.log("whiskyData:", whiskyData)     //<- DELETE WHEN CLEANING CODE
     }
     if(whiskyId) fetchWhisky() 

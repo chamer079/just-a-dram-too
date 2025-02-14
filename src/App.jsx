@@ -54,10 +54,10 @@ const App = () => {
   try {
     // console.log("whiskyID:", whiskyId, "whiskyFormData:", whiskyFormData) //<-DELETE WHEN CLEANING CODE
     const updatedWhisky = await whiskyService.update(whiskyId, whiskyFormData)
-    // console.log(updatedWhisky.whisky)  //<-DELETE WHEN CLEANING CODE
+    console.log(updatedWhisky.whisky)  //<-DELETE WHEN CLEANING CODE
     // console.log(whiskies) //<-DELETE WHEN CLEANING CODE
     setWhiskies(whiskies.map((whisky) => (whiskyId === whisky.id ? updatedWhisky.whisky : whisky)))
-    navigate(`/whiksies/${whiskyId}`)
+    navigate(`/whiskies/${whiskyId}`)
   }catch(err) {
     throw new Error(err)
 

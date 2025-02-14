@@ -1,0 +1,28 @@
+.whisky-card {
+    border: 2px red solid;
+    width: 725px;
+    height: 329px;
+    display: flex;
+    border-radius: 3px;
+    background-color: #000000;
+}
+
+.card-link {
+    color: #ffffff;
+}
+
+.card-img {
+    border-left: 3px;
+    background-color: #ffffff;
+}
+
+.card-text {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 25px;
+}
+
+.card-notes {
+    padding-top: 20px;
+    line-height: 28px;
+}
