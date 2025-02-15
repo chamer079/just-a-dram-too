@@ -5,11 +5,7 @@ import "./Index.css"
 import StockImg from "../../images/StockImg.png"
 
 const Index = (props) => {
-  const cardImgStyle = {
-    width: "250px",
-    height: "335px",
-  }
-
+  
   return (
     <main>
       <NavBar />
@@ -22,12 +18,12 @@ const Index = (props) => {
             to={`/whiskies/${whisky.id}`}
           >
             <div className="whisky-card">
-              <div className="card-img">
+              <div className="card-img-container">
                 {!whisky.image ? (
-                  <img style={cardImgStyle} src={StockImg} alt="filler image" />
+                  <img className="card-img"  src={StockImg} alt="filler image" />
                 ) : (
                   <img
-                    style={cardImgStyle}
+                    className="card-img"
                     src={whisky.image}
                     alt={whisky.name}
                   />
