@@ -14,7 +14,7 @@ const Index = (props) => {
     <main>
       <NavBar />
      
-      <section >
+      <section className="index-section">
         {props.whiskies?.map((whisky) => (
           <Link className="card-link"
             key={whisky.id}

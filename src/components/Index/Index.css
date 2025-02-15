@@ -1,9 +1,22 @@
+.index-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+
+.card-link {
+    margin: 50px 0;
+}
+
+
+
 .whisky-card {
     border: 2px red solid;
-    width: 725px;
-    height: 329px;
+    width: 700px;
+    height: 300px;
     display: flex;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: #000000;
 }
 
@@ -18,7 +31,7 @@
 
 .card-text {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     padding: 25px;
 }
 
