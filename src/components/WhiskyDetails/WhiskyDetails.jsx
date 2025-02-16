@@ -38,9 +38,10 @@ const WhiskyDetails = (props) => {
           <p>Distillery: {whisky.distillery}</p>
           <p>Type: {whisky.type}</p>
           <p>Country: {whisky.origin}</p>
+          <p>Age: {whisky.age}</p>
           <p>Alcohol Content: {whisky.alcohol_content}</p>
-          <p>Hue: {whisky.hue}</p>
           <p>Flavor: {whisky.flavor}</p>
+          <p>Hue: {whisky.hue}</p>
           <p>Notes: {whisky.notes}</p>
         </div>
       </section>
