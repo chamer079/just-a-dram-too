@@ -76,7 +76,7 @@ const LogInForm = () => {
               />
             </div>
             <div>
-              <button>Login</button>
+              <button className="login-button">Login</button>
             </div>
           </form>
         </div>  

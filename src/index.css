@@ -37,7 +37,7 @@ ul {
 }
   
 a {
-    font-size: 26px;
+    font-size: 30px;
     text-decoration: none;
 }
 
@@ -60,10 +60,3 @@ input::placeholder {
     letter-spacing: .6px;
 }
 
-button {
-    font-size: 26px;
-    letter-spacing: 1px;
-    color: #ffffff;
-    background-color: #406BF8;
-    border: none;
-}

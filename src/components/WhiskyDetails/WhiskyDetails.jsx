@@ -36,19 +36,19 @@ const WhiskyDetails = (props) => {
           )}
         </div>
         <div className="detail-content">
-          <p className="detail-text"><span className="detail-category">Distillery:</span> {whisky.distillery}</p>
-          <p className="detail-text"><span className="detail-category">Type:</span> {whisky.type}</p>
-          <p className="detail-text"><span className="detail-category">Country:</span> {whisky.origin}</p>
-          <p className="detail-text"><span className="detail-category">Age</span>: {whisky.age}</p>
-          <p className="detail-text"><span className="detail-category">Alcohol Content:</span> {whisky.alcohol_content}</p>
-          <p className="detail-text"><span className="detail-category">Flavor:</span> {whisky.flavor}</p>
-          <p className="detail-text"><span className="detail-category">Hue:</span> {whisky.hue}</p>
-          <p className="detail-text"><span className="detail-category">Notes:</span> {whisky.notes}</p>
-        </div>
+          <p className="detail-text">Distillery: {whisky.distillery}</p>
+          <p className="detail-text">Type: {whisky.type}</p>
+          <p className="detail-text">Country: {whisky.origin}</p>
+          <p className="detail-text">Age: {whisky.age}</p>
+          <p className="detail-text">Alcohol Content: {whisky.alcohol_content}</p>
+          <p className="detail-text">Flavor: {whisky.flavor}</p>
+          <p className="detail-text">Hue: {whisky.hue}</p>
+          <p className="detail-text">Notes: {whisky.notes}</p>
       <div className="edit-delete-buttons">
-        <Link to={`/whiskies/${whisky.id}/edit`}>Update</Link>
-        <button onClick={() => props.handleDeleteWhisky(whiskyId)}>DELETE</button>
+        <Link className="detail-update-button" to={`/whiskies/${whisky.id}/edit`}>Update</Link>
+        <button className="detail-delete-button" onClick={() => props.handleDeleteWhisky(whiskyId)}>DELETE</button>
       </div>
+        </div>
       </section>
     </main>
   )

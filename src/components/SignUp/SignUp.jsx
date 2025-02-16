@@ -113,7 +113,7 @@ const SignUpForm = () => {
                                 />
                             </div>
                             <div>
-                                <button disabled={isFormInvalid()}>Sign Up</button>
+                                <button className="signup-button" disabled={isFormInvalid()}>Sign Up</button>
                             </div>
                         </form>
                     <div className="login-link">

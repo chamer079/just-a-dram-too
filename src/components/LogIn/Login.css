@@ -32,3 +32,14 @@ input {
     width: 54vw;
     height: 98vh;
 }
+
+.login-button {
+    font-size: 26px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background-color: #406BF8;
+    border: none;
+    width: 26vw;
+    height: 5vh;
+    margin: 80px 0 50px 9px;
+}
