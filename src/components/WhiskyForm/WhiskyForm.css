@@ -1,0 +1,54 @@
+.page-headline {
+    margin: 30px 0 60px 20px;
+}
+
+.form-container {
+    border: 2px red solid;
+    display: flex;
+}
+
+.img-field-container {
+    border: 3px brown solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-input {
+    margin: 24px 0 50px;
+}
+
+.content-field-container {
+    border: 2px blue solid;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.two-column-input-fields {
+    border: 5px rgb(96, 198, 7) solid;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 50vh;
+}
+
+.single-column-input-fields {
+    border: 3px purple solid;
+    display: flex;
+    flex-flow: column wrap;
+    
+    height: 40vh;
+}
+
+.category-input {
+    margin: 20px;
+}
+
+.submit-button {
+    border: 5px rgb(255, 111, 0) solid;
+    margin: 50px 0;
+}
+
+
+
+

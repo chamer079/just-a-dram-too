@@ -23,6 +23,11 @@ const WhiskyDetails = (props) => {
     return <h1>Loading...</h1>
   }
 
+//   const imgStyle = {
+//     width: "480px",
+//     height: "628px",
+// }
+
   return (
     <main>
       <NavBar />

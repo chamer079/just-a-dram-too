@@ -52,6 +52,7 @@ const LogInForm = () => {
             <div>
               {/* <label htmlFor="username">Username</label> */}
               <input
+                className="login-input"
                 type="text"
                 autoComplete="off"
                 id="username"
@@ -65,6 +66,7 @@ const LogInForm = () => {
             <div>
               {/* <label htmlFor="password">Password</label> */}
               <input
+                className="login-input"
                 type="password"
                 autoComplete="off"
                 id="password"

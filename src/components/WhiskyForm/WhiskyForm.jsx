@@ -4,6 +4,7 @@ import { useParams } from "react-router"
 import * as whiskyService from "../../services/whiskyService"
 import NavBar from "../NavBar/NavBar"
 import StockImg from "../../images/StockImg.png"
+import "./WhiskyForm.css"
 
 
 const WhiskyForm = (props) => {
@@ -69,89 +70,107 @@ const WhiskyForm = (props) => {
     return(
         <main>
             <NavBar />
-            <h1>{whiskyId ? "EDIT PAGE" : "CREATE PAGE"}</h1>
-            <form onSubmit={handleSubmit}>
-            <section>
-                <div className="img-input">
-                    <label htmlFor="image-input">Image URL</label>
+            <h1 className="page-headline">{whiskyId ? "EDIT PAGE" : "Add A New Whisky"}</h1>
+            <form className="form-container" onSubmit={handleSubmit}>
+           
+                <div className="img-field-container">
+                    {/* <label htmlFor="img-input">Image URL</label> */}
                     <input 
+                        className="img-input"
                         type="text"
                         name="image"
                         id="image-input"
                         value={formData.image}
                         onChange={handleChange}
+                        placeholder="Image URL"
                     />
-                    <img style={imgStyle} src={StockImg}  alt="filler image"/>
+                    <img className="img-container" style={imgStyle} src={StockImg}  alt="filler image"/>
                 </div>
-            </section>
-            <section>
+      
+            <div className="content-field-container">
                 <div className="two-column-input-fields">
-                    <label htmlFor="name-input">Name</label>
+                    {/* <label htmlFor="name-input"></label> */}
                     <input
+                        className="category-input"
                         required
                         type="text"
                         name="name"
                         id="name-input"
                         value={formData.name}
                         onChange={handleChange}
+                        placeholder="Name"
                     />
-                    <label htmlFor="distillery-input">Distillery</label>
+                    {/* <label htmlFor="distillery-input">Distillery</label> */}
                     <input 
+                        className="category-input"
                         type="text"
                         name="distillery"
                         id="distillery-input"
                         value={formData.distillery}
                         onChange={handleChange}
+                        placeholder="Distillery"
                     />
-                    <label htmlFor="type-input">Type</label>
-                    <input 
+                    {/* <label htmlFor="type-input">Type</label> */}
+                    <input
+                        className="category-input" 
                         type="text"
                         name="type"
                         id="type-input"
                         value={formData.type}
                         onChange={handleChange}
+                        placeholder="Type"
                     />
-                    <label htmlFor="origin-input">Country</label>
-                    <input 
+                    {/* <label htmlFor="origin-input">Country</label> */}
+                    <input
+                        className="category-input" 
                         type="text"
                         name="origin"
                         id="origin-input"
                         value={formData.origin}
                         onChange={handleChange}
+                        placeholder="Country"
                     />
-                    <label htmlFor="age-input">Age</label>
+                    {/* <label htmlFor="age-input">Age</label> */}
                     <input 
+                        className="category-input"
                         type="text"
                         name="age"
                         id="age-input"
                         value={formData.age}
                         onChange={handleChange}
+                        placeholder="Age"
                     />
-                    <label htmlFor="alcohol-content-input">Alcohol Content</label>
-                    <input 
+                    {/* <label htmlFor="alcohol-content-input">Alcohol Content</label> */}
+                    <input
+                        className="category-input" 
                         type="text"
                         name="alcohol_content"
                         id="alcohol-content-input"
                         value={formData.alcohol_content}
                         onChange={handleChange}
+                        placeholder="Alcohol Content"
                     />
-                </div>
-                <div className="single-column-input-fields">
-                    <label htmlFor="hue-input">Hue</label>
-                    <input 
+                    {/* <label htmlFor="hue-input">Hue</label> */}
+                    <input
+                        className="category-input" 
                         type="text"
                         name="hue"
                         id="hue-input"
                         value={formData.hue}
                         onChange={handleChange}
+                        placeholder="Hue"
                     />
-                    <label htmlFor="flavor-input">Flavor Profile</label>
+                </div>
+                <div className="single-column-input-fields">
+                    {/* <label htmlFor="flavor-input">Flavor Profile</label> */}
                     <input
+                        className="category-input"
                         type="text"
                         name="flavor"
                         id="flavor-input"
                         value={formData.flavor}
                         onChange={handleChange}
+                        placeholder="Flavor"
                     />
                     <label htmlFor="notes-input">Notes</label>
                     <textarea 
@@ -162,8 +181,8 @@ const WhiskyForm = (props) => {
                         onChange={handleChange}
                     />
                 </div>
-            </section>
-            <button type="submit">{whiskyId ? "Update Entry" : "Add New Entry"}</button>
+            <button className="submit-button" type="submit">{whiskyId ? "Update Entry" : "Add New Entry"}</button>
+            </div>
             </form>
         </main>
     )
