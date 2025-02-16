@@ -37,7 +37,7 @@ const WhiskyDetails = (props) => {
           {!whisky.image ? (
             <img className="detail-img" src={StockImg} alt="filler image" />
           ) : (
-            <img src={whisky.image} alt={whisky.name} />
+            <img className="detail-img" src={whisky.image} alt={whisky.name} />
           )}
         </div>
         <div className="detail-content">
