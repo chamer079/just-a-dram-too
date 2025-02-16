@@ -164,7 +164,7 @@ const WhiskyForm = (props) => {
                 <div className="single-column-input-fields">
                     {/* <label htmlFor="flavor-input">Flavor Profile</label> */}
                     <input
-                        className="category-input"
+                        className="flavor-input"
                         type="text"
                         name="flavor"
                         id="flavor-input"
@@ -172,13 +172,18 @@ const WhiskyForm = (props) => {
                         onChange={handleChange}
                         placeholder="Flavor"
                     />
-                    <label htmlFor="notes-input">Notes</label>
+                    {/* <label htmlFor="notes-input">Notes</label> */}
                     <textarea 
+                        className="notes-input"
                         type="text"
                         name="notes"
                         id="notes-input"
                         value={formData.notes}
                         onChange={handleChange}
+                        placeholder="Notes"
+                        rows="10"
+                        cols="10"
+
                     />
                 </div>
             <button className="submit-button" type="submit">{whiskyId ? "Update Entry" : "Add New Entry"}</button>

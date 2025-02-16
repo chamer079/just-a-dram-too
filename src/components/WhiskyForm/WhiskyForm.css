@@ -3,50 +3,67 @@
 }
 
 .form-container {
-    border: 2px red solid;
+    /* border: 2px red solid; */
     display: flex;
 }
 
 .img-field-container {
-    border: 3px brown solid;
+    /* border: 3px brown solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .img-input {
-    margin: 24px 0 50px;
+    margin: 13px 0 60px;
 }
 
 .content-field-container {
-    border: 2px blue solid;
     display: flex;
     flex-flow: column wrap;
 }
 
 .two-column-input-fields {
-    border: 5px rgb(96, 198, 7) solid;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    height: 50vh;
+    justify-content: space-around;
+    height: 45vh;
 }
 
 .single-column-input-fields {
-    border: 3px purple solid;
     display: flex;
-    flex-flow: column wrap;
-    
-    height: 40vh;
+    flex-direction: column;
+    height: 45vh;
 }
 
-.category-input {
-    margin: 20px;
+.flavor-input {
+    width: 55vw;
+    margin: 20px 0 20px 30px;
+}
+
+.notes-input {
+    font-size: 24px;
+    padding-left: 8px;
+    width: 55vw;
+    margin: 20px 30px;
+    border: none;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .75)
+}
+
+.notes-input::placeholder {
+    color: #000000;
+    letter-spacing: .63px;
 }
 
 .submit-button {
-    border: 5px rgb(255, 111, 0) solid;
-    margin: 50px 0;
+    font-size: 26px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    background-color: #406BF8;
+    border: none;
+    padding: 10px 100px;
+    width: 25vw;
+    margin: 20px 250px;
 }
 
 
