@@ -1,75 +1,66 @@
 .detail-name {
-    margin: 40px 0;
-    text-align: center;
+  margin: 40px 0;
+  text-align: center;
 }
 
 .whisky-details {
-    display: flex;
-    flex-flow: row wrap;
-    padding-top: 9px;}
-
- .detail-img-container {
-    width: 35vw;
-    height: 70vh;
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 9px;
 }
 
-/*.detail-img {
-    max-width: 100%;
-    max-height: 80%;
-    max-width: max-content;
-    max-height: max-content;
-} */
+.detail-img-container {
+  width: 35vw;
+  height: 70vh;
+}
 
 .detail-content {
-    /* width: 875px; */
-    width: 65vw;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    padding-left: 30px;
-
-    /* line-height: 0; */
+  width: 65vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding-left: 30px;
 }
 
 .detail-text {
-    padding: 10px 0;
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 2%;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2%;
 }
 
 .edit-delete-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
 }
 
 .detail-update-button {
-    padding: 10px 100px;
-    background-color: #406BF8;
-    color: #ffffff;
-    letter-spacing: 1px;
-    border: none;
+  padding: 10px 100px;
+  background-color: #406bf8;
+  color: #ffffff;
+  letter-spacing: 1px;
+  border: none;
 }
 
 .detail-update-button:hover {
-    background-color: #000000;
-    color: #ffffff; 
-    font-weight: 600;
-    letter-spacing: 2px;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .detail-delete-button {
-    font-size: 28px;
-    letter-spacing: 1px;
-    padding: 10px 100px;
-    color: #ffffff;
-    background-color: #406BF8;
-    border: none;
+  font-size: 28px;
+  letter-spacing: 1px;
+  padding: 10px 100px;
+  color: #ffffff;
+  background-color: #406bf8;
+  border: none;
 }
 
 .detail-delete-button:hover {
-    background-color: #000000;
-    color: #ffffff; 
-    font-weight: 600;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 600;
 }

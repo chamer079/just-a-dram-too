@@ -1,75 +1,86 @@
 .page-headline {
-    margin: 30px 0 60px 20px;
+  margin: 30px 0 60px 20px;
 }
 
 .form-container {
-    display: flex;
+  display: flex;
 }
 
 .img-field-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-img-container {
+  width: 35vw;
 }
 
 .img-input {
-    margin: 13px 0 60px;
+  margin: 53px 0 60px;
 }
 
-
-
 .content-field-container {
-    display: flex;
-    flex-flow: column wrap;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  height: 100vh;
 }
 
 .two-column-input-fields {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    height: 45vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.category-input {
+  margin: 25px;
 }
 
 .single-column-input-fields {
-    display: flex;
-    flex-direction: column;
-    margin-left: 23px;
-    height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .flavor-input {
-    width: 58vw;
-    padding: 12px;
-    margin: 20px 0 20px 30px;
+  width: 54vw;
+  margin: -15px 0 35px 0;
 }
 
 .notes-input {
-    font-size: 24px;
-    padding-left: 10px;
-    width: 58vw;
-    margin: 20px 30px;
-    border: none;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, .75)
+  font-size: 24px;
+  padding-left: 10px;
+  width: 54vw;
+  margin: 20px 0;
+  border: none;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
 }
 
 .notes-input::placeholder {
-    color: #000000;
-    letter-spacing: .63px;
+  color: #000000;
+  letter-spacing: 0.63px;
 }
 
 .submit-button {
-    display: flex;
-    
-    font-size: 26px;
-    color: #ffffff;
-    letter-spacing: 1px;
-    background-color: #406BF8;
-    border: none;
-    padding: 10px 100px;
-    width: 25vw;
-    margin: 20px 0 20px 280px;
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  background-color: #406bf8;
+  border: none;
+  padding: 10px 100px;
+  width: 25vw;
+  margin: 20px 0 20px 280px;
 }
 
-
-
-
+.submit-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 2px;
+  width: 30vw;
+  margin: 20px 0 20px 250px;
+}

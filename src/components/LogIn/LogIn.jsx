@@ -1,56 +1,57 @@
-import { useState, useContext } from "react"
-import { useNavigate } from "react-router"
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router";
 
-import { logIn } from "../../services/authService"
-import { UserContext } from "../../contexts/UserContext"
-// import GlassOfWhisky from "../../images/GlassOfWhisky.png"
-import PouringWhisky from "../../images/PouringWhisky.jpg"
-import "./Login.css"
+import { logIn } from "../../services/authService";
+import { UserContext } from "../../contexts/UserContext";
+import PouringWhisky from "../../images/PouringWhisky.jpg";
+import "./Login.css";
 
 const LogInForm = () => {
-  const navigate = useNavigate()
-  const { setUser } = useContext(UserContext)
-  const [message, setMessage] = useState("")
+  const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
+  const [message, setMessage] = useState("");
   const [formData, setFormData] = useState({
     username: "",
     password: "",
-  })
+  });
 
   const handleChange = (evt) => {
-    setMessage("")
-    setFormData({ ...formData, [evt.target.name]: evt.target.value })
+    setMessage("");
+    setFormData({ ...formData, [evt.target.name]: evt.target.value });
   };
 
   const handleSubmit = async (evt) => {
-    evt.preventDefault()
+    evt.preventDefault();
     try {
-      const signedInUser = await logIn(formData)
+      const signedInUser = await logIn(formData);
 
-      setUser(signedInUser)
-      navigate("/whiskies")
+      setUser(signedInUser);
+      navigate("/whiskies");
     } catch (err) {
-      setMessage(err.message)
+      setMessage(err.message);
     }
-  }
+  };
 
   const imgStyle = {
     width: "875px",
     height: "858px",
-  }
-
+  };
 
   return (
     <main>
       <section className="login-section">
         <div className="login-content">
           <div className="login-welcome">
-          <h1>Welcome Back</h1>
-          <p>Welcome back! Please enter your details.</p>
+            <h1>Welcome Back</h1>
+            <p>Welcome back! Please enter your details.</p>
           </div>
           <p>{message}</p>
-          <form className="login-form" autoComplete="off" onSubmit={handleSubmit}>
+          <form
+            className="login-form"
+            autoComplete="off"
+            onSubmit={handleSubmit}
+          >
             <div>
-              {/* <label htmlFor="username">Username</label> */}
               <input
                 className="login-input"
                 type="text"
@@ -64,7 +65,6 @@ const LogInForm = () => {
               />
             </div>
             <div>
-              {/* <label htmlFor="password">Password</label> */}
               <input
                 className="login-input"
                 type="password"
@@ -81,13 +81,13 @@ const LogInForm = () => {
               <button className="login-button">Login</button>
             </div>
           </form>
-        </div>  
+        </div>
         <div className="login-img">
           <img style={imgStyle} src={PouringWhisky} alt="glas of whisky" />
         </div>
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default LogInForm
+export default LogInForm;

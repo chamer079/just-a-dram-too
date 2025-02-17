@@ -1,66 +1,64 @@
 ul {
-    display: flex;
-    flex-flow: row wrap;
-    list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
 }
 
 .open-links {
-    margin: 30px 0 30px 0;
+  margin: 30px 0 30px 0;
 }
 
 .login-links {
-    color: #000000;
-    text-align: left;
+  color: #000000;
+  text-align: left;
 }
 
 .link-divider {
-    font-size: 30px;
-    text-decoration: none;
-    color: #000000;
+  font-size: 30px;
+  text-decoration: none;
+  color: #000000;
 }
 
 .link-divider:hover {
-    color: #000000;
-    font-weight: 400;
+  color: #000000;
+  font-weight: 400;
 }
 
 .protected-links {
-    display: flex;
-    flex-flow: row wrap; 
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    background-color: #16151B;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  background-color: #16151b;
 }
 
 .logo-link {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .home-create-links {
-    display: flex;
-    flex-flow: row wrap;      
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .link-text {
-    color: #ffffff;
-    font-weight: 400;
-    letter-spacing: 3px;
-    padding: 15px;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 3px;
+  padding: 15px;
 }
 
 .user-link-divider {
-    color: #ffffff;
-    font-size: 30px;
-    cursor: default;
+  color: #ffffff;
+  font-size: 30px;
+  cursor: default;
 }
 
 .user-link-divider:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .sign-out-link {
-    padding-right: 20px;
+  padding-right: 20px;
 }
-
-
