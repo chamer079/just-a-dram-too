@@ -21,34 +21,23 @@ const Index = (props) => {
             style={{ textDecoration: "none" }}
             to={`/whiskies/${whisky.id}`}
           >
-            <div className="whisky-card">
-              <div className="card-img-container">
+            <div className="relative flex w-full max-w-[64rem] flex-row rounded-md bg-black bg-clip-border text-white shadow-md">
+              <div className="relative m-0 w-1/4 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
                 {!whisky.image ? (
-                  <img className="card-filler-img"    src={StockImg} alt="filler image" />
+                  <img className="h-80 w-9/12 object-cover"    src={StockImg} alt="filler image" />
                 ) : (
                   <img
-                    className="card-img"
-                   
+                    className="h-80 w-9/12 object-cover"
                     src={whisky.image}
                     alt={whisky.name}
                   />
                 )}
               </div>
-              {/* <div className="card-text"> */}
-                {!whisky.image ? (
-                  <div className="card-text-filler-img">
-                    <h2>{whisky.name}</h2>
-                    <h2>{whisky.type}</h2>
-                    <p className="card-notes">{whisky.notes}</p>
-                   </div>
-                ) : (
-                  <div className="card-text">
-                    <h2>{whisky.name}</h2>
-                    <h2>{whisky.type}</h2>
-                    <p className="card-notes">{whisky.notes}</p>
-                  </div>
-                )}
-              {/* </div> */}
+              <div className="p-6">                
+                    <h2 className="mb-2 block text-white-2xl font-semibold">{whisky.name}</h2>
+                    <h2 className="mb-2 block text-2xl font-semibold leading-snug tracking-normal">{whisky.type}</h2>
+                    <p className="mb-8 blocktext-base font-normal leading-relaxed ">{whisky.notes}</p>              
+              </div>
             </div>
           </Link>
         ))}

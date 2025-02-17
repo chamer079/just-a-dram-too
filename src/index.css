@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 
-/* * {
+* {
     padding: 0;
     margin: 0;
 }
@@ -30,6 +30,11 @@ p {
     font-weight: 200;
     letter-spacing: .4px;
     line-height: 37px;
+}
+
+img {
+    width: 20vw;
+    height: 34vh;
 }
 
 ul {
@@ -61,7 +66,7 @@ input {
 input::placeholder {
     color: #000000;
     letter-spacing: .6px;
-} */
+}
 
 /* button {
     font-size: 28px;
