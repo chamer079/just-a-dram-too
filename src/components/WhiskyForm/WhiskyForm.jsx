@@ -84,7 +84,9 @@ const WhiskyForm = (props) => {
                         onChange={handleChange}
                         placeholder="Image URL"
                     />
-                    <img className="img-container" style={imgStyle} src={StockImg}  alt="filler image"/>
+                    <div className="form-img-container">
+                        <img className="form-img-input" style={imgStyle} src={StockImg}  alt="filler image"/>
+                    </div>
                 </div>
       
             <div className="content-field-container">

@@ -5,6 +5,10 @@ import "./Index.css"
 import StockImg from "../../images/StockImg.png"
 
 const Index = (props) => {
+  // const imgStyle = {
+  //   width: "10vw",
+  //   height: "34.7vh",
+  // }
   
   return (
     <main>
@@ -20,7 +24,7 @@ const Index = (props) => {
             <div className="whisky-card">
               <div className="card-img-container">
                 {!whisky.image ? (
-                  <img className="card-img"  src={StockImg} alt="filler image" />
+                  <img className="card-filler-img"   src={StockImg} alt="filler image" />
                 ) : (
                   <img
                     className="card-img"
@@ -29,11 +33,21 @@ const Index = (props) => {
                   />
                 )}
               </div>
-              <div className="card-text">
-                <h2>{whisky.name}</h2>
-                <h2>{whisky.type}</h2>
-                <p className="card-notes">{whisky.notes}</p>
-              </div>
+              {/* <div className="card-text"> */}
+                {!whisky.image ? (
+                  <div className="card-text-filler-img">
+                    <h2>{whisky.name}</h2>
+                    <h2>{whisky.type}</h2>
+                    <p className="card-notes">{whisky.notes}</p>
+                   </div>
+                ) : (
+                  <div className="card-text">
+                    <h2>{whisky.name}</h2>
+                    <h2>{whisky.type}</h2>
+                    <p className="card-notes">{whisky.notes}</p>
+                  </div>
+                )}
+              {/* </div> */}
             </div>
           </Link>
         ))}
