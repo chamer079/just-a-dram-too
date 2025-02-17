@@ -10,33 +10,42 @@
 }
 
 .whisky-card {
+  display: flex;
+  flex-flow: column wrap;
   border: 3px black solid;
   width: 720px;
   height: 301px;
-  display: flex;
   border-radius: 5px;
+  
 }
 
-.card-link {
+/* .card-link {
   color: #ffffff;
 }
 
 .card-img-container {
   border-radius: 3px 0 0 3px;
-  width: 57vw;
-  height: 34vh;
-}
-
-.card-filler-img {
-  border-radius: 3px 0 0 3px;
   width: 12vw;
-  height: 34.6vh;
+  height: 36.6vh;
 }
-
 .card-img {
   border-radius: 3px 0 0 3px;
   max-width: 100%;
   max-height: 100%;
+}
+
+.card-text {
+  display: flex;
+  flex-flow: row wrap;
+  width: 526px;
+  height: 297px;
+  padding: 25px;
+  background-color: #000000;
+} */
+/* .card-filler-img {
+  border-radius: 3px 0 0 3px;
+  width: 12vw;
+  height: 34.6vh;
 }
 
 .card-text-filler-img {
@@ -47,14 +56,8 @@
   background-color: #000000;
 }
 
-.card-text {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 25px;
-  background-color: #000000;
-}
 
 .card-notes {
   padding-top: 20px;
   line-height: 28px;
-}
+} */

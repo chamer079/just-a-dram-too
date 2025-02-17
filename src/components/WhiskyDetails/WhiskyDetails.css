@@ -42,7 +42,7 @@
 }
 
 .detail-update-button {
-    padding: 10px 160px;
+    padding: 10px 100px;
     background-color: #406BF8;
     color: #ffffff;
     letter-spacing: 1px;
@@ -60,7 +60,7 @@
     font-size: 28px;
     letter-spacing: 1px;
     margin-left: 120px;
-    padding: 27px 160px;
+    padding: 27px 100px;
     color: #ffffff;
     background-color: #406BF8;
     border: none;

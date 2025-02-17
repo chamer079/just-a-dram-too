@@ -1,8 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-* {
+
+/* * {
     padding: 0;
     margin: 0;
 }
@@ -71,5 +70,5 @@ input::placeholder {
     color: #ffffff;
     letter-spacing: 1px;
     border: none;
-}
+} */
 

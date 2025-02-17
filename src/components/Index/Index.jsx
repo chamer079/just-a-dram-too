@@ -6,8 +6,8 @@ import StockImg from "../../images/StockImg.png"
 
 const Index = (props) => {
   // const imgStyle = {
-  //   width: "10vw",
-  //   height: "34.7vh",
+  //   width: "12vw",
+  //   height: "36.6vh",
   // }
   
   return (
@@ -24,10 +24,11 @@ const Index = (props) => {
             <div className="whisky-card">
               <div className="card-img-container">
                 {!whisky.image ? (
-                  <img className="card-filler-img"   src={StockImg} alt="filler image" />
+                  <img className="card-filler-img"    src={StockImg} alt="filler image" />
                 ) : (
                   <img
                     className="card-img"
+                   
                     src={whisky.image}
                     alt={whisky.name}
                   />
