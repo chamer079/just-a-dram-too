@@ -62,10 +62,10 @@ const WhiskyForm = (props) => {
     if(whiskyId) fetchWhisky() 
    }, [whiskyId])
 
-    const imgStyle = {
-        width: "630px",
-        height: "794px",
-    }
+    // const imgStyle = {
+    //     width: "630px",
+    //     height: "794px",
+    // }
 
     return(
         <main>
@@ -85,7 +85,7 @@ const WhiskyForm = (props) => {
                         placeholder="Image URL"
                     />
                     <div className="form-img-container">
-                        <img className="form-img-input" style={imgStyle} src={StockImg}  alt="filler image"/>
+                        <img className="w-80 max-h-11/12" src={StockImg}  alt="filler image"/>
                     </div>
                 </div>
       

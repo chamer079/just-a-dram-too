@@ -33,18 +33,20 @@
 .single-column-input-fields {
     display: flex;
     flex-direction: column;
+    margin-left: 23px;
     height: 45vh;
 }
 
 .flavor-input {
-    width: 55vw;
+    width: 58vw;
+    padding: 12px;
     margin: 20px 0 20px 30px;
 }
 
 .notes-input {
     font-size: 24px;
-    padding-left: 8px;
-    width: 55vw;
+    padding-left: 10px;
+    width: 58vw;
     margin: 20px 30px;
     border: none;
     box-shadow: 0 2px 2px rgba(0, 0, 0, .75)
@@ -56,6 +58,8 @@
 }
 
 .submit-button {
+    display: flex;
+    
     font-size: 26px;
     color: #ffffff;
     letter-spacing: 1px;
@@ -63,7 +67,7 @@
     border: none;
     padding: 10px 100px;
     width: 25vw;
-    margin: 20px 250px;
+    margin: 20px 0 20px 280px;
 }
 
 
