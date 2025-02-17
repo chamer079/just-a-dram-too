@@ -10,7 +10,7 @@ This app is a remake of the original, [Just a Dram](https://github.com/chamer079
 
 ## Deployed Links
 
-Back-End Link - TBD
+Back-End Link - [Heroku Link](https://git.heroku.com/just-a-dram-too-backend.git)
 
 Front-End Link - TBD
 
@@ -64,6 +64,7 @@ Thank you to ChatGPT for creating the neat pour of whikey logo.
 - Postgres SQL
 - React
 - CSS
+- Tailwind CSS
 
 ## PMVPS
 

@@ -40,6 +40,7 @@ const SignUpForm = () => {
     return !(username && email && password && password === passwordConf);
   };
 
+
   const imgStyle = {
     width: "850px",
     height: "875px",
