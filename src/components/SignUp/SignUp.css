@@ -6,11 +6,15 @@
 .about-content {
     display: flex;
     flex-flow: row wrap;
-    margin: 120px 60px;
+    margin: 130px 60px;
 }
 
 .about-header {
     margin-bottom: 40px;
+}
+
+.about-blurb {
+    line-height: 35px;
 }
 
 .sign-up-section {

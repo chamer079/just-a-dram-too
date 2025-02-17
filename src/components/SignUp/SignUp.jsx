@@ -53,8 +53,8 @@ const SignUpForm = () => {
             </header>
             <section className="about-content">
                 <h2 className="about-header">About</h2>
-                <p>Whether you spell whisky with a “y” or an “ey” this is the place for you. Just a Dram is a digital journal for whisky enthusiasts to record, and share amongst friends, their tasting experiences. So, sit back. Pour yourself a dram, and begin documenting your whisky tasting journey.</p>
-                <p>Cheers!</p>
+                <p className="about-blurb">Whether you spell whisky with a “y” or an “ey” this is the place for you. Just a Dram is a digital journal for whisky enthusiasts to record, and share amongst friends, their tasting experiences. So, sit back. Pour yourself a dram, and begin documenting your whisky tasting journey.</p>
+                <p className="about-blurb">Cheers!</p>
             </section>
             <section className="sign-up-section">
                 <div className="sign-up-img">
