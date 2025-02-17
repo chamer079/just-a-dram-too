@@ -5,59 +5,19 @@
   margin-top: 80px;
 }
 
-.card-link {
-  margin: 50px 0;
-}
-
-.whisky-card {
-  display: flex;
-  flex-flow: column wrap;
-  border: 3px black solid;
-  width: 720px;
-  height: 301px;
-  border-radius: 5px;
-  
-}
-
-/* .card-link {
+ .card-link {
   color: #ffffff;
+  margin: 25px 0;
 }
-
-.card-img-container {
-  border-radius: 3px 0 0 3px;
-  width: 12vw;
-  height: 36.6vh;
-}
-.card-img {
-  border-radius: 3px 0 0 3px;
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .card-text {
   display: flex;
-  flex-flow: row wrap;
-  width: 526px;
-  height: 297px;
-  padding: 25px;
-  background-color: #000000;
-} */
-/* .card-filler-img {
-  border-radius: 3px 0 0 3px;
-  width: 12vw;
-  height: 34.6vh;
+  flex-flow: column wrap;
+  padding: 25px 0 0 25px;
 }
-
-.card-text-filler-img {
-  display: flex;
-  flex-flow: row wrap;
-  width: 165vw;
-  padding: 25px;
-  background-color: #000000;
-}
+  .card-notes {
+    padding-top: 20px;
+    line-height: 28px;
+  } 
 
 
-.card-notes {
-  padding-top: 20px;
-  line-height: 28px;
-} */
+
