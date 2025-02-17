@@ -5,10 +5,6 @@ import "./Index.css"
 import StockImg from "../../images/StockImg.png"
 
 const Index = (props) => {
-  // const imgStyle = {
-  //   width: "12vw",
-  //   height: "36.6vh",
-  // }
   
   return (
     <main>
