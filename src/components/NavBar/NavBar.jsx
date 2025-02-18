@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router";
 
-
 import { UserContext } from "../../contexts/UserContext";
 import "./NavBar.css";
 import NavBarLogo from "../../images/NavBarLogo.png";
@@ -9,7 +8,6 @@ import UserIcon from "../../images/UserIcon.png";
 
 const NavBar = () => {
   const { user, setUser } = useContext(UserContext);
-
 
   const handleSignOut = () => {
     localStorage.removeItem("token");
@@ -26,7 +24,6 @@ const NavBar = () => {
     height: "100px",
   };
 
- 
   return (
     <nav>
       {user ? (
@@ -57,7 +54,7 @@ const NavBar = () => {
         <div className="open-links">
           <ul>
             <li>
-              <Link className="login-links" to='/sign-up' >
+              <Link className="login-links" to="/sign-up">
                 Sign Up
               </Link>
             </li>
