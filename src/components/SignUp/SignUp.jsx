@@ -55,7 +55,7 @@ const SignUpForm = () => {
         </p>
         <p className="about-blurb">Cheers!</p>
       </section>
-      <section className="sign-up-section">
+      <section id="signUpSection" className="sign-up-section">
         <div className="sign-up-img">
           <img className="pot-still-img" src={PotStills} alt="pot stills" />
         </div>

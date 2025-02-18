@@ -14,6 +14,13 @@ const NavBar = () => {
     setUser(null);
   };
 
+  const scrollToElement = (id) => {
+    const element = document.getElementById(id)
+    if(element){
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   const navLogoImg = {
     width: "140px",
     height: "100px",
@@ -54,7 +61,7 @@ const NavBar = () => {
         <div className="open-links">
           <ul className="open-links">
             <li>
-              <Link className="login-links" to="/sign-up">
+              <Link className="login-links" to={scrollToElement("signUpSection")}>
                 Sign Up
               </Link>
             </li>
