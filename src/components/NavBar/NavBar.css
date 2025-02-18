@@ -107,9 +107,10 @@ ul {
   }
 
   .home-create-links {
+    flex-direction: row;
+    justify-content: center;
     order: 2;
     width: 100vw;
-    justify-content: space-evenly;
     padding: 30px 0;
   }
 
@@ -119,6 +120,7 @@ ul {
 
   .user-link-divider {
     font-size: 38px;
+    padding: 0 15px;
   }
 
   .sign-out-link {
