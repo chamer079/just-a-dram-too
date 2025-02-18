@@ -33,13 +33,13 @@ const NavBar = () => {
               <img style={navLogoImg} src={NavBarLogo} alt="logo button" />
             </Link>
             <div className="home-create-links">
-              <li >
+              <li>
                 <Link className="user-link-text" to="/whiskies">
                   Home
                 </Link>
               </li>
               <li className="user-link-divider">|</li>
-              <li >
+              <li>
                 <Link className="user-link-text" to="/whiskies/new">
                   Add New Entry
                 </Link>

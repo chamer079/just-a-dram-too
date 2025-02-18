@@ -92,7 +92,6 @@ ul {
 
   .link-divider {
     font-size: 38px;
-
   }
 
   .protected-links {
@@ -105,7 +104,7 @@ ul {
     display: flex;
     justify-content: start;
     width: 50vw;
-    }
+  }
 
   .home-create-links {
     order: 2;
