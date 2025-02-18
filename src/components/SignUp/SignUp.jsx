@@ -53,7 +53,7 @@ const SignUpForm = () => {
           back. Pour yourself a dram, and begin documenting your whisky tasting
           journey.
         </p>
-        <p className="about-blurb">Cheers!</p>
+        <p className="cheers">Cheers!</p>
       </section>
       <section id="signUpSection" className="sign-up-section">
         <div className="sign-up-img">
