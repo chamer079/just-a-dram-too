@@ -13,7 +13,7 @@
   margin-bottom: 40px;
 }
 
-.about-blurb {
+.blurb {
   line-height: 35px;
 }
 
@@ -59,46 +59,99 @@ input {
   margin: 80px 0 50px 9px;
 }
 
-.login-link {
+.login-blurb {
   text-align: center;
   font-weight: 200;
 }
 
-.login-links {
+.login-redirect {
   font-size: 22px;
   letter-spacing: 0.4px;
 }
 
-.login-links:hover {
+.login-redirect:hover {
   font-size: 26px;
   letter-spacing: 0.7px;
 }
 
-@media only screen and (max-width: 1392px){
- /* .sign-up-section {
-  width: 100vw;
- } */
- 
-  .pot-still-img{
-    width: 80%;
+@media only screen and (max-width: 430px) {
+  .header-img {
+    background-image: url("../../images/BarrelPic2.jpg");
+    height: 30vh;
+  }
+
+  .about-content {
+    display: flex;
+    justify-content: center;
+    margin: 90px 40px;
+  }
+
+  .about-header {
+    font-size: 40px;
+  }
+
+  .blurb {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: 1.2px;
+  }
+
+  .sign-up-section {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-between;
+    width: 100vw;
+  }
+  .sign-up-img {
+    height: 50%;
   }
 
   .sign-up-content {
-    
-    
-    width: auto;
-  
-    margin: 0;
-  }
-}
-
-@media only screen and (max-width: 1334px){
-  .sign-up-section {
-    flex-flow: column wrap;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    margin: 40px 0;
   }
 
-  .pot-still-img {
-    width: auto;
-    height: 50%;
+  .sign-up-headline {
+    margin: 12px 0 20px;
+  }
+
+  .mobile-input {
+    width: 90vw;
+    height: 7vh;
+    font-size: 30px;
+    padding: 12px;
+    margin: 13px 0;
+  }
+
+  .signup-button {
+    font-size: 30px;
+    letter-spacing: 1.3px;
+    color: #ffffff;
+    background-color: #406bf8;
+    border: none;
+    width: 90vw;
+    height: 7vh;
+    margin: 60px 0 50px;
+  }
+
+  .blurb {
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .login-redirect {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  .login-redirect:hover {
+    font-size: 34px;
+    color: #406bf8;
+    letter-spacing: 0.7px;
   }
 }

@@ -40,14 +40,13 @@ const SignUpForm = () => {
     return !(username && email && password && password === passwordConf);
   };
 
-
   return (
     <main>
       <NavBar />
       <header className="header-img"></header>
       <section className="about-content">
         <h2 className="about-header">About</h2>
-        <p className="about-blurb">
+        <p className="blurb">
           Whether you spell whisky with a “y” or an “ey” this is the place for
           you. Just a Dram is a digital journal for whisky enthusiasts to
           record, and share amongst friends, their tasting experiences. So, sit
@@ -66,6 +65,7 @@ const SignUpForm = () => {
           <form onSubmit={handleSubmit}>
             <div>
               <input
+                className="mobile-input"
                 type="text"
                 id="username"
                 value={username}
@@ -77,6 +77,7 @@ const SignUpForm = () => {
             </div>
             <div>
               <input
+                className="mobile-input"
                 type="text"
                 id="email"
                 value={email}
@@ -88,6 +89,7 @@ const SignUpForm = () => {
             </div>
             <div>
               <input
+                className="mobile-input"
                 type="password"
                 id="password"
                 value={password}
@@ -99,6 +101,7 @@ const SignUpForm = () => {
             </div>
             <div>
               <input
+                className="mobile-input"
                 type="password"
                 id="confirm"
                 value={passwordConf}
@@ -114,9 +117,9 @@ const SignUpForm = () => {
               </button>
             </div>
           </form>
-          <div className="login-link">
-            <p>Have an account?</p>
-            <Link className="login-links" to="/login">
+          <div className="login-blurb">
+            <p className="blurb">Have an account?</p>
+            <Link className="login-redirect" to="/login">
               Login
             </Link>
           </div>

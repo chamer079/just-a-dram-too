@@ -34,13 +34,13 @@ const NavBar = () => {
             </Link>
             <div className="home-create-links">
               <li>
-                <Link className="link-text" to="/whiskies">
+                <Link className="user-link-text" to="/whiskies">
                   Home
                 </Link>
               </li>
               <li className="user-link-divider">|</li>
               <li>
-                <Link className="link-text" to="/whiskies/new">
+                <Link className="user-link-text" to="/whiskies/new">
                   Add New Entry
                 </Link>
               </li>
@@ -52,7 +52,7 @@ const NavBar = () => {
         </div>
       ) : (
         <div className="open-links">
-          <ul>
+          <ul className="open-links">
             <li>
               <Link className="login-links" to="/sign-up">
                 Sign Up
