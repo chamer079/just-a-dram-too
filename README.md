@@ -10,7 +10,7 @@ This app is a remake of the original, [Just a Dram](https://github.com/chamer079
 
 ## Deployed Links
 
-Back-End Link - TBD
+Back-End Link - [Heroku Link](https://git.heroku.com/just-a-dram-too-backend.git)
 
 Front-End Link - TBD
 
@@ -51,7 +51,8 @@ Thank you to the following for sharing such high quality images on [Unsplash](ht
 
 - [Katherine Conrad](https://unsplash.com/@katherineconrad?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) for the [rickhouse](https://unsplash.com/photos/brown-wooden-barrels-on-rack-QL3SaEwio_k) photo.
 - [Kevin Kristhian](https://unsplash.com/@kevinthepeople?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) for the [pot still](https://unsplash.com/photos/brass-colored-container-29zMpabSkXo) photo.
-- [Dylan de Jonge](https://unsplash.com/@dylandejonge?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) for the [whisky](https://unsplash.com/photos/photo-of-person-holding-glass-bottle-pe9T4ROjpzQ) photo.
+- [Dylan de Jonge](https://unsplash.com/@dylandejonge?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) for the [whisky being poured](https://unsplash.com/photos/photo-of-person-holding-glass-bottle-pe9T4ROjpzQ) photo.
+- [Daniel Norris](https://unsplash.com/photos/a-shelf-filled-with-lots-of-wooden-barrels-l1kZD3_dySY?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash) for the [second rickhouse](https://unsplash.com/photos/a-shelf-filled-with-lots-of-wooden-barrels-l1kZD3_dySY) photo used in responsive design.
 - [Nathan Dumlao](https://unsplash.com/@nate_dumlao?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) for the [WhistlePig](https://unsplash.com/photos/captain-morgan-original-spiced-gold-bottle-97G8s6Bl_RQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) photo.
 - [Allan Francis](https://unsplash.com/@allanbenjaminfrancis?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) for the [Woodford Reserve](https://unsplash.com/photos/a-bottle-of-woodford-reserve-sitting-on-a-table-jOEzl0bcXyE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) photo.
 - [Jack Dylag](https://unsplash.com/@dylu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) for the [Talisker](https://unsplash.com/photos/talisker-bottle-beside-drinking-glass-JwWKV2gCPkE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) photo.
@@ -64,6 +65,7 @@ Thank you to ChatGPT for creating the neat pour of whikey logo.
 - Postgres SQL
 - React
 - CSS
+- Tailwind CSS
 
 ## PMVPS
 

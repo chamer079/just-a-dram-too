@@ -1,35 +1,102 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useContext, useState, useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router";
 
-function App() {
-  const [count, setCount] = useState(0)
+import * as whiskyService from "./services/whiskyService";
+import SignUp from "./components/SignUp/SignUp";
+import LogIn from "./components/LogIn/LogIn";
+import Landing from "./components/Landing/Landing";
+import Index from "./components/Index/Index";
+import WhiskyDetails from "./components/WhiskyDetails/WhiskyDetails";
+import WhiskyForm from "./components/WhiskyForm/WhiskyForm";
+
+import { UserContext } from "./contexts/UserContext";
+
+const App = () => {
+  const { user } = useContext(UserContext);
+
+  const [whiskies, setWhiskies] = useState([]);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchAllWhiskies = async () => {
+      const whiskyData = await whiskyService.index();
+      setWhiskies(whiskyData.whiskies);
+    };
+
+    if (user) fetchAllWhiskies();
+  }, [user]);
+
+  const handleAddWhisky = async (whiskyFormData) => {
+    try {
+      const newWhisky = await whiskyService.create(whiskyFormData);
+      setWhiskies([newWhisky.whisky, ...whiskies]);
+      navigate("/whiskies");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleDeleteWhisky = async (whiskyId) => {
+    try {
+      const deletedWhisky = await whiskyService.deleteWhisky(whiskyId);
+      setWhiskies(whiskies.filter((whisky) => whisky.id !== deletedWhisky.id));
+      navigate("/whiskies");
+      window.location.reload();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleUpdateWhisky = async (whiskyId, whiskyFormData) => {
+    try {
+      const updatedWhisky = await whiskyService.update(
+        whiskyId,
+        whiskyFormData
+      );
+
+      setWhiskies(
+        whiskies.map((whisky) =>
+          whiskyId === whisky.id ? updatedWhisky.whisky : whisky
+        )
+      );
+      navigate(`/whiskies/${whiskyId}`);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        {user ? (
+          <>
+            <Route path="/whiskies" element={<Index whiskies={whiskies} />} />
+            <Route
+              path="/whiskies/:whiskyId"
+              element={
+                <WhiskyDetails handleDeleteWhisky={handleDeleteWhisky} />
+              }
+            />
+            <Route
+              path="/whiskies/new"
+              element={<WhiskyForm handleAddWhisky={handleAddWhisky} />}
+            />
+            <Route
+              path="/whiskies/:whiskyId/edit"
+              element={<WhiskyForm handleUpdateWhisky={handleUpdateWhisky} />}
+            />
+          </>
+        ) : (
+          <>
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/login" element={<LogIn />} />
+          </>
+        )}
+      </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

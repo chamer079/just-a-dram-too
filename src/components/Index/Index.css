@@ -1,0 +1,22 @@
+.index-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 80px;
+}
+
+.card-link {
+  color: #ffffff;
+  margin: 25px 0;
+}
+
+.card-text {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 25px 0 0 25px;
+}
+
+.card-notes {
+  padding-top: 20px;
+  line-height: 28px;
+}
