@@ -78,7 +78,6 @@ ul {
   letter-spacing: 0.7px;
 }
 
-
 @media only screen and (max-width: 430px) {
   .open-links {
     display: flex;
@@ -93,5 +92,39 @@ ul {
 
   .link-divider {
     font-size: 38px;
+
+  }
+
+  .protected-links {
+    justify-content: center;
+    width: 100vw;
+    background-color: #16151b;
+  }
+
+  .logo-link {
+    display: flex;
+    justify-content: start;
+    width: 50vw;
+    }
+
+  .home-create-links {
+    order: 2;
+    width: 100vw;
+    justify-content: space-evenly;
+    padding: 30px 0;
+  }
+
+  .user-link-text {
+    padding: 0;
+  }
+
+  .user-link-divider {
+    font-size: 38px;
+  }
+
+  .sign-out-link {
+    display: flex;
+    justify-content: end;
+    width: 50vw;
   }
 }
