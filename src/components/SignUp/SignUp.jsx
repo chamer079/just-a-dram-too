@@ -58,7 +58,7 @@ const SignUpForm = () => {
       </section>
       <section className="sign-up-section">
         <div className="sign-up-img">
-          <img className="pot-still-img"  src={PotStills} alt="pot stills" />
+          <img className="pot-still-img" src={PotStills} alt="pot stills" />
         </div>
         <div className="sign-up-content">
           <h1 className="sign-up-headline">Get Started Now</h1>

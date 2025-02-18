@@ -20,7 +20,7 @@ const Index = (props) => {
               <div className="relative m-0 w-1/4 shrink-0 overflow-hidden rounded-md rounded-r-none bg-white bg-clip-border text-gray-700">
                 {!whisky.image ? (
                   <img
-                    className="max-h-75 w-9/12 object-cover"
+                    className="max-h-75 w-9/12 object-contain"
                     src={StockImg}
                     alt="filler image"
                   />
