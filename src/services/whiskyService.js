@@ -8,11 +8,11 @@ const index = async () => {
     const data = await res.json();
 
     if (data.err) {
-      throw new Error(data.err);
+      console.log(data.err);
     }
     return data;
   } catch (err) {
-    throw new Error(err);
+    console.log(err);
   }
 };
 
@@ -23,7 +23,7 @@ const show = async (whiskyId) => {
     });
     return res.json();
   } catch (err) {
-    throw new Error(err);
+    console.log(err);
   }
 };
 
@@ -39,7 +39,7 @@ const create = async (whiskyFormData) => {
     });
     return res.json();
   } catch (err) {
-    throw new Error(err);
+    console.log(err);
   }
 };
 
@@ -53,7 +53,7 @@ const deleteWhisky = async (whiskyId) => {
     });
     return res.json();
   } catch (err) {
-    throw new Error(err);
+    console.log(err);
   }
 };
 
@@ -69,14 +69,8 @@ const update = async (whiskyId, whiskyFormData) => {
     });
     return res.json();
   } catch (err) {
-    throw new Error(err);
+    console.log(err);
   }
 };
 
-export { 
-    index, 
-    show, 
-    create, 
-    deleteWhisky, 
-    update 
-};
+export { index, show, create, deleteWhisky, update };

@@ -33,7 +33,7 @@ const App = () => {
       setWhiskies([newWhisky.whisky, ...whiskies]);
       navigate("/whiskies");
     } catch (err) {
-      throw new Error(err);
+      console.log(err);
     }
   };
 
@@ -44,7 +44,7 @@ const App = () => {
       navigate("/whiskies");
       window.location.reload();
     } catch (err) {
-      throw new Error(err);
+      console.log(err);
     }
   };
 
@@ -62,7 +62,7 @@ const App = () => {
       );
       navigate(`/whiskies/${whiskyId}`);
     } catch (err) {
-      throw new Error(err);
+      console.log(err);
     }
   };
 
