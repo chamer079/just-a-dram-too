@@ -32,18 +32,15 @@ const LogInForm = () => {
     }
   };
 
-  const imgStyle = {
-    width: "875px",
-    height: "858px",
-  };
-
   return (
     <main>
       <section className="login-section">
         <div className="login-content">
           <div className="login-welcome">
-            <h1>Welcome Back</h1>
-            <p>Welcome back! Please enter your details.</p>
+            <h1 className="welcome-h1">Welcome Back</h1>
+            <p className="welcome-blurb">
+              Welcome back! Please enter your details.
+            </p>
           </div>
           <p>{message}</p>
           <form
@@ -83,7 +80,11 @@ const LogInForm = () => {
           </form>
         </div>
         <div className="login-img">
-          <img style={imgStyle} src={PouringWhisky} alt="glas of whisky" />
+          <img
+            className="whisky-pour"
+            src={PouringWhisky}
+            alt="glas of whisky"
+          />
         </div>
       </section>
     </main>
