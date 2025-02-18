@@ -57,6 +57,8 @@ Thank you to the following for sharing such high quality images on [Unsplash](ht
 - [Allan Francis](https://unsplash.com/@allanbenjaminfrancis?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) for the [Woodford Reserve](https://unsplash.com/photos/a-bottle-of-woodford-reserve-sitting-on-a-table-jOEzl0bcXyE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) photo.
 - [Jack Dylag](https://unsplash.com/@dylu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) for the [Talisker](https://unsplash.com/photos/talisker-bottle-beside-drinking-glass-JwWKV2gCPkE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) photo.
 
+Thanks to [Ram Patra's](https://blog.rampatra.com/how-to-smoothly-scroll-to-a-specific-content-or-element-in-react) article on how to smoothly scroll to a specific content in React.
+
 Thank you to ChatGPT for creating the neat pour of whikey logo.
 
 ## Technologies Used
