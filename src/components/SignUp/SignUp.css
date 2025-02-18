@@ -24,7 +24,7 @@
 
 .pot-still-img {
   width: 100%;
-  height: auto;
+  height: 100vh;
 }
 
 .sign-up-content {
@@ -32,11 +32,11 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  width: 54vw;
+  width: 60vw;
   height: 100vh;
 }
 .sign-up-headline {
-  margin: 140px 0 60px;
+  margin: 60px 0 60px;
 }
 
 input {
@@ -104,6 +104,10 @@ input {
     width: 100vw;
   }
   .sign-up-img {
+    height: 50%;
+  }
+
+  .pot-still-img {
     height: 50%;
   }
 
