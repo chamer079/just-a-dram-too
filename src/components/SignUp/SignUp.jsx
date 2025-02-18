@@ -40,10 +40,10 @@ const SignUpForm = () => {
     return !(username && email && password && password === passwordConf);
   };
 
-  const imgStyle = {
-    width: "850px",
-    height: "875px",
-  };
+  // const imgStyle = {
+  //   width: "100%",
+  //   height: "auto",
+  // };
 
   return (
     <main>
@@ -62,7 +62,7 @@ const SignUpForm = () => {
       </section>
       <section className="sign-up-section">
         <div className="sign-up-img">
-          <img style={imgStyle} src={PotStills} alt="pot stills" />
+          <img className="pot-still-img"  src={PotStills} alt="pot stills" />
         </div>
         <div className="sign-up-content">
           <h1 className="sign-up-headline">Get Started Now</h1>

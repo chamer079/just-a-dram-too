@@ -22,16 +22,21 @@
   flex-flow: row wrap;
 }
 
+.pot-still-img {
+  width: 100%;
+  height: auto;
+}
+
 .sign-up-content {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  width: 45vw;
+  width: 54vw;
   height: 100vh;
 }
 .sign-up-headline {
-  margin: 60px 0 60px;
+  margin: 140px 0 60px;
 }
 
 input {
@@ -67,4 +72,33 @@ input {
 .login-links:hover {
   font-size: 26px;
   letter-spacing: 0.7px;
+}
+
+@media only screen and (max-width: 1392px){
+ /* .sign-up-section {
+  width: 100vw;
+ } */
+ 
+  .pot-still-img{
+    width: 80%;
+  }
+
+  .sign-up-content {
+    
+    
+    width: auto;
+  
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1334px){
+  .sign-up-section {
+    flex-flow: column wrap;
+  }
+
+  .pot-still-img {
+    width: auto;
+    height: 50%;
+  }
 }

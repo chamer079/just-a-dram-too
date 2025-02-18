@@ -11,6 +11,8 @@ const signUp = async (formData) => {
     const data = await res.json();
     if (data.err) {
       throw new Error(data.err);
+      // throw new Error("Invalid Username and/or Password");
+
     }
 
     if (data.token) {
@@ -21,6 +23,8 @@ const signUp = async (formData) => {
     throw new Error("Invalid response from server");
   } catch (err) {
     throw new Error(err);
+    // throw new Error("Invalid Username and/or Password");
+
   }
 };
 
@@ -35,6 +39,8 @@ const logIn = async (formData) => {
     const data = await res.json();
     if (data.err) {
       throw new Error(data.err);
+      // throw new Error("Invalid Username and/or Password");
+
     }
 
     if (data.token) {
@@ -45,6 +51,8 @@ const logIn = async (formData) => {
     throw new Error("Invalid response from server");
   } catch (err) {
     throw new Error(err);
+    // throw new Error("Invalid Username and/or Password");
+
   }
 };
 
